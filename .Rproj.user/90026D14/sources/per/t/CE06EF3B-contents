@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: docs
 
 book:
   title: "Eunyoung's Learning Diary"
@@ -8,6 +9,7 @@ book:
   chapters:
     - index.qmd #my info
     - references.qmd
+
 
 bibliography: references.bib
 

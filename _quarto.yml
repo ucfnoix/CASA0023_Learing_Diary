@@ -6,44 +6,18 @@ book:
   title: "Eunyoung's Learning Diary"
   author: "Eunyoung Choi"
   # date: "10/01/2023"
-
-  navbar:
-    # logo: general_images/casa_logo.jpg
-    collapse: true
-    collapse-below: lg
-    background: light
-    #reader-mode: true
-    search: true
-    right:
-      - icon: github
-  sidebar:
-    title: "CASA0023"
-    style: floating
-    reader-mode: true
-  repo-url: https://github.com/ucfnoix/CASA0023_Learing_Diary
-  repo-actions: [edit, issue]
-  # google-analytics:
-  #   tracking-id: "G-5LZK055F2X"
-  #   anonymize-ip: true
-
-
   chapters:
     - index.qmd #my info
     - references.qmd
 
-  reader-mode: true
 
 bibliography: references.bib
 
 format:
   html:
-    theme:
-        light: [cosmo, flatly]
-        dark: [cosmo, darkly]
-    code-link: true
-
+    theme: cosmo
   pdf:
-    documentclass: scrbook
+    documentclass: scrreprt
 
-# editor: visual
+editor: visual
 
