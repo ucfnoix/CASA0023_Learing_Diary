@@ -1,0 +1,16 @@
+{
+  "hash": "866bfbb872fc72fb45fefcbdb8bddd42",
+  "result": {
+    "markdown": "# Welcome to MY PLACE {.unnumbered}\n\nWelcome to Eunyoung's diary ![](images/image-1680664414.png){width=\"18\"}\\\nYou might wonder who I am before you explore my awesome diary ![](images/image-106880547.png){width=\"15\"} ![](images/image-1135957059.png){width=\"16\" height=\"13\"}\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](me.jpg){fig-align='center' width=85%}\n:::\n:::\n\n\n-   **Who am I?**\n\n    -   Love to play and eat all the time\n        -   Clotted cream first and jam on top... no mercy!\n    -   Cats save the world ![](images/image-665550276.png){width=\"16\" height=\"17\"}\n        -   Yes, she is a stray cat Sam-sae-gi in my house that I take care of!\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](sam-sae-gi.jpg){fig-align='center' width=85%}\n:::\n:::\n\n\n-   **My background is...**\n\n    -   Studied urban and regional planning\n    -   Worked for 5 years as a civil servant in South Korea\n    -   Studying Urban Spatial Science at UCL now\n\n-   **What I am interested in...**\n\n    -   Smart cities initiative\n    -   Revitalise towns in the countryside, South Korea\n        -   This is why I am taking this module for later:D\n\nOkay, let's wrap up my brief introduction here and look around my diary now!\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

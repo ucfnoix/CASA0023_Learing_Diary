@@ -1,0 +1,21 @@
+project:
+  type: book
+
+book:
+  title: "Eunyoung's Learning Diary"
+  author: "Eunyoung Choi"
+  # date: "10/01/2023"
+  chapters:
+    - index.qmd #my info
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
