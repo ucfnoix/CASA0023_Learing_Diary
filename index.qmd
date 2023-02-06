@@ -1,33 +1,36 @@
-# Welcome to MY PLACE {.unnumbered}
+# **Welcome to MY PLACE** {.unnumbered}
 
 Welcome to Eunyoung's diary ![](images/image-1680664414.png){width="18"}\
-You might wonder who I am before you explore my awesome diary ![](images/image-106880547.png){width="15"} ![](images/image-1135957059.png){width="16" height="13"}
+You might wonder who I am before you explore my learning diary ![](images/image-106880547.png){width="15"} ![](images/image-1135957059.png){width="16" height="13"}
 
 ```{r echo=FALSE, out.width = "85%", fig.align='center'}
-knitr::include_graphics('me.jpg')
+knitr::include_graphics('images/me.jpg')
 ```
 
--   **Who am I?**
-
-    -   Love to play and eat all the time
-        -   Clotted cream first and jam on top... no mercy!
-    -   Cats save the world ![](images/image-665550276.png){width="16" height="17"}
-        -   Yes, she is a stray cat Sam-sae-gi in my house that I take care of!
+## **Who am I?**
+- Love to play and eat all the time! (Clotted cream first and jam on top... no mercy!)
+-   Cats save the world ![](images/image-665550276.png){width="16" height="17"}  
+Yes, she is a stray cat Sam-sae-gi in my house that I take care of!
 
 ```{r echo=FALSE, out.width = "85%", fig.align='center'}
-knitr::include_graphics('sam-sae-gi.jpg')
+knitr::include_graphics('images/sam-sae-gi.jpg')
 ```
 
--   **My background is...**
+---------------------------
 
-    -   Studied urban and regional planning
-    -   Worked for 5 years as a civil servant in South Korea
-    -   Studying Urban Spatial Science at UCL now
+## **My background is...**
 
--   **What I am interested in...**
+-   MSc., Urban Spatial Science, University College London, U.K.
+-   B.A., Urban and Regional Planning, Dankook University, Rep. of Korea
 
-    -   Smart cities initiative
-    -   Revitalise towns in the countryside, South Korea
-        -   This is why I am taking this module for later:D
+---------------------------
+
+## **What I am interested in...**
+
+-   Smart cities initiative
+-   Revitalise towns and agriculture in the countryside
+    -   This is why I am taking this module for later :D
+
+---------------------------
 
 Okay, let's wrap up my brief introduction here and look around my diary now!

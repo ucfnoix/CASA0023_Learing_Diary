@@ -5,9 +5,13 @@ project:
 book:
   title: "Eunyoung's Learning Diary"
   author: "Eunyoung Choi"
-  # date: "10/01/2023"
+  date: "10/01/2023"
   chapters:
-    - index.qmd #my info
+    - index.qmd # my information
+    - wk_1_remote_sensing.qmd
+    - wk_2_xaringan.qmd
+    # - wk_3_.qmd
+    # - wk_4_.qmd
     - references.qmd
 
 

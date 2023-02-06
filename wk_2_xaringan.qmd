@@ -1,0 +1,10 @@
+# 2. Portfolio tools: Xaringan and Quarto
+
+## Lidar & Radar
+```{r, echo = FALSE, out.width = '40%'}
+xaringanExtra::embed_xaringan(
+    url = "https://ucfnoix.github.io/CASA0023_wk2_xaringan/"
+    # "https://ucfnoix.github.io/CASA0023_Learning_Diary/prac_2_presentation.html" # 같은 레퍼지토리에 넣을 때 
+    ratio = "16:9"
+)
+```
