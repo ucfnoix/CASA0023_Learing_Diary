@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Eunyoung Choi">
-<meta name="dcterms.date" content="2023-10-01">
 
-<title>Eunyoung’s Learning Diary</title>
+<title>Eunyoung’s Learning Diary - Week 1. An Introduction to Remote Sensing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./wk_1_remote_sensing.html" rel="next">
+<link href="./wk_2_xaringan.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -71,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Eunyoung’s Learning Diary</h1>
+      <h1 class="quarto-secondary-nav-title">Week 1. An Introduction to Remote Sensing</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -96,12 +95,12 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><strong>Welcome to MY PLACE</strong></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><strong>Welcome to MY PLACE</strong></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wk_1_remote_sensing.html" class="sidebar-item-text sidebar-link">Week 1. An Introduction to Remote Sensing</a>
+  <a href="./wk_1_remote_sensing.html" class="sidebar-item-text sidebar-link active">Week 1. An Introduction to Remote Sensing</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -123,12 +122,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#welcome-to-my-place" id="toc-welcome-to-my-place" class="nav-link active" data-scroll-target="#welcome-to-my-place"><strong>Welcome to MY PLACE</strong></a>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a>
   <ul class="collapse">
-  <li><a href="#who-am-i" id="toc-who-am-i" class="nav-link" data-scroll-target="#who-am-i"><strong>Who am I?</strong></a></li>
-  <li><a href="#my-background-is" id="toc-my-background-is" class="nav-link" data-scroll-target="#my-background-is"><strong>My background is…</strong></a></li>
-  <li><a href="#what-i-am-interested-in" id="toc-what-i-am-interested-in" class="nav-link" data-scroll-target="#what-i-am-interested-in"><strong>What I am interested in…</strong></a></li>
+  <li><a href="#remote-sensing" id="toc-remote-sensing" class="nav-link" data-scroll-target="#remote-sensing">Remote sensing</a></li>
   </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -137,26 +136,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Eunyoung’s Learning Diary</h1>
+<h1 class="title d-none d-lg-block">Week 1. An Introduction to Remote Sensing</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Eunyoung Choi </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">October 1, 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -164,59 +151,69 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="welcome-to-my-place" class="level1 unnumbered">
-<h1 class="unnumbered"><strong>Welcome to MY PLACE</strong></h1>
-<p>Welcome to Eunyoung’s diary <img src="images/image-1680664414.png" class="img-fluid" width="18"><br>
-You might wonder who I am before you explore my learning diary <img src="images/image-106880547.png" class="img-fluid" width="15"> <img src="images/image-1135957059.png" width="16" height="13"></p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/me.jpg" class="img-fluid figure-img" style="width:85.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<section id="who-am-i" class="level2">
-<h2 class="anchored" data-anchor-id="who-am-i"><strong>Who am I?</strong></h2>
+<p>Let’s get started with remote sensing to explore our world</p>
+<section id="summary" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="summary">Summary</h2>
+<section id="remote-sensing" class="level3">
+<h3 class="anchored" data-anchor-id="remote-sensing">Remote sensing</h3>
 <ul>
-<li>Love to play and eat all the time! (Clotted cream first and jam on top… no mercy!)</li>
-<li>Cats save the world <img src="images/image-665550276.png" width="16" height="17"><br>
-Yes, she is a stray cat Sam-sae-gi in my house that I take care of!</li>
-</ul>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/sam-sae-gi.jpg" class="img-fluid figure-img" style="width:85.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="my-background-is" class="level2">
-<h2 class="anchored" data-anchor-id="my-background-is"><strong>My background is…</strong></h2>
+<li><p>Acquiring <strong>information from a distance through sensors</strong> such as satellites, planes(aerial imagery), drones etc.</p></li>
+<li><p>The two types of sensor with <strong>electromagnetic waves</strong></p>
+<table class="table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 30%">
+<col style="width: 41%">
+<col style="width: 16%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>Type</strong></td>
+<td style="text-align: center;"><strong>How to work</strong></td>
+<td style="text-align: center;"><strong>Emit</strong></td>
+<td style="text-align: center;"><strong>Example</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Passive</strong></td>
+<td style="text-align: center;">use available energy<br>
+(from the sun)</td>
+<td style="text-align: center;">Nothing</td>
+<td style="text-align: center;">Human eye, camera,<br>
+satellite sensor</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>Active</strong></td>
+<td style="text-align: center;">have an energy source for illumination</td>
+<td style="text-align: center;">emits electromagenic waves and then waits to receive</td>
+<td style="text-align: center;">Radar, X-ray, LiDAR</td>
+</tr>
+</tbody>
+</table></li>
+<li><p><strong>Light scattering</strong> caused by atmosphere and distance (light reaches)</p>
 <ul>
-<li>MSc., Urban Spatial Science, University College London, U.K.</li>
-<li>B.A., Urban and Regional Planning, Dankook University, Rep.&nbsp;of Korea</li>
-</ul>
-<hr>
-</section>
-<section id="what-i-am-interested-in" class="level2">
-<h2 class="anchored" data-anchor-id="what-i-am-interested-in"><strong>What I am interested in…</strong></h2>
+<li><p>The shorter the wavelength,</p>
 <ul>
-<li>Smart cities initiative</li>
-<li>Revitalise towns and agriculture in the countryside
+<li><p>the stronger the energy</p></li>
+<li><p>the bluer it is <img src="images/Rainbow Emoji.png" class="img-fluid" width="15"></p></li>
+</ul></li>
+<li><p>It makes distance measurement difficult (e.g.&nbsp;atmosphere, clouds) → <em>Alternative methods</em></p>
 <ul>
-<li>This is why I am taking this module for later :D</li>
+<li><p>Synthetic aperture radar (SAR) : Polarization, Fluoresence</p></li>
+<li><p>Bidirectional Reflectance Distribution Function (BRDF)</p></li>
+<li><p><strong>Atmospheric correction</strong>: Spatial, Spectral, Temporal, <strong>Radiometric</strong></p></li>
+</ul></li>
 </ul></li>
 </ul>
-<hr>
-<p>Okay, let’s wrap up my brief introduction here and look around my diary now!</p>
-
-
 </section>
+</section>
+<section id="application" class="level2">
+<h2 class="anchored" data-anchor-id="application">Application</h2>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<p>Source : https://emojiisland.com/pages/download-new-emoji-icons-in-png-ios-10</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -355,10 +352,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><strong>Welcome to MY PLACE</strong></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./wk_1_remote_sensing.html" class="pagination-link">
-        <span class="nav-page-text">Week 1. An Introduction to Remote Sensing</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./wk_2_xaringan.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">2. Portfolio tools: Xaringan and Quarto</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

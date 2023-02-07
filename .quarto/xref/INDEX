@@ -4,5 +4,11 @@
   },
   "references.qmd": {
     "references.html": "cfa1afb9"
+  },
+  "wk_1_remote_sensing.qmd": {
+    "wk_1_remote_sensing.html": "30812083"
+  },
+  "wk_2_xaringan.qmd": {
+    "wk_2_xaringan.html": "0d69e0ce"
   }
 }
