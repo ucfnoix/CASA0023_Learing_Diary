@@ -1,13 +1,11 @@
-# 2. Portfolio tools: Xaringan and Quarto
+# 2. Remote Sensor: Lidar & Radar
 
-## Lidar & Radar
+This is a learning diary for week 2.\
+Let's find out about Lidar and Radar!
 
 ```{r, echo = FALSE, out.width = '40%', eval=FALSE}
 xaringanExtra::embed_xaringan(
     url = "https://ucfnoix.github.io/CASA0023_wk2_xaringan/"
-    # "https://ucfnoix.github.io/CASA0023_Learning_Diary/prac_2_presentation.html" # 같은 레퍼지토리에 넣을 때 
     ratio = "16:9"
 )
 ```
-
-test

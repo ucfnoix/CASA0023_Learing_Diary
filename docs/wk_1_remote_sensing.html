@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Eunyoung’s Learning Diary - Week 1. An Introduction to Remote Sensing</title>
+<title>Eunyoung’s Learning Diary - 1. An Introduction to Remote Sensing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Week 1. An Introduction to Remote Sensing</h1>
+      <h1 class="quarto-secondary-nav-title">1. An Introduction to Remote Sensing</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -100,12 +100,27 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wk_1_remote_sensing.html" class="sidebar-item-text sidebar-link active">Week 1. An Introduction to Remote Sensing</a>
+  <a href="./wk_1_remote_sensing.html" class="sidebar-item-text sidebar-link active">1. An Introduction to Remote Sensing</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wk_2_xaringan.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">2. Portfolio tools: Xaringan and Quarto</span></a>
+  <a href="./wk_2_xaringan.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">2. Remote Sensor: Lidar &amp; Radar</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./wk_3_corrections.html" class="sidebar-item-text sidebar-link">3. Corrections</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./wk_4_policy.html" class="sidebar-item-text sidebar-link">4. Policy</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./wk_5_GEE.html" class="sidebar-item-text sidebar-link">5. Google Earth Engine</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -122,12 +137,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">1.1 Summary</a>
   <ul class="collapse">
-  <li><a href="#remote-sensing" id="toc-remote-sensing" class="nav-link" data-scroll-target="#remote-sensing">Remote sensing</a></li>
+  <li><a href="#remote-sensing" id="toc-remote-sensing" class="nav-link" data-scroll-target="#remote-sensing">1.1.1 Remote sensing 📡</a></li>
+  <li><a href="#types-of-waves" id="toc-types-of-waves" class="nav-link" data-scroll-target="#types-of-waves">1.1.2 Types of waves 〰️</a></li>
+  <li><a href="#light-scattering-methods-to-gauge-distance" id="toc-light-scattering-methods-to-gauge-distance" class="nav-link" data-scroll-target="#light-scattering-methods-to-gauge-distance">1.1.3 Light scattering &amp; methods to gauge distance 📐</a></li>
   </ul></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">Application</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">1.2 Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">1.3 Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -136,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Week 1. An Introduction to Remote Sensing</h1>
+<h1 class="title d-none d-lg-block">1. An Introduction to Remote Sensing</h1>
 </div>
 
 
@@ -151,14 +168,28 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Let’s get started with remote sensing to explore our world</p>
+<p>This is a learning diary for week 1.<br>
+Let’s get started with remote sensing to explore our world 🌏</p>
 <section id="summary" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="summary">Summary</h2>
+<h2 class="unnumbered anchored" data-anchor-id="summary">1.1 Summary</h2>
 <section id="remote-sensing" class="level3">
-<h3 class="anchored" data-anchor-id="remote-sensing">Remote sensing</h3>
+<h3 class="anchored" data-anchor-id="remote-sensing">1.1.1 Remote sensing 📡</h3>
 <ul>
-<li><p>Acquiring <strong>information from a distance through sensors</strong> such as satellites, planes(aerial imagery), drones etc.</p></li>
-<li><p>The two types of sensor with <strong>electromagnetic waves</strong></p>
+<li>Acquiring <strong>information from a distance through sensors</strong> such as satellites, planes(aerial imagery), drones etc. - e.g.&nbsp;satellites collect data on the same points on Earth every day to every 16 days.</li>
+<li>Type of orbit
+<ul>
+<li>geosynchronous orbit (GSO): satellite matches the Earth’s rotation</li>
+<li>geostationary orbit: holds the same position</li>
+</ul></li>
+</ul>
+</section>
+<section id="types-of-waves" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-waves">1.1.2 Types of waves 〰️</h3>
+<ul>
+<li><p><strong>An electromagnetic wave</strong> has two components, <em>an electric field</em>(moving up and down) and <em>a magnetic field</em>(moving left and right).</p>
+<ul>
+<li>The two types of sensors with electromagnetic waves.</li>
+</ul>
 <table class="table">
 <colgroup>
 <col style="width: 10%">
@@ -168,10 +199,10 @@ ul.task-list li input[type="checkbox"] {
 </colgroup>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><strong>Type</strong></td>
+<td style="text-align: center;"><strong>Types</strong></td>
 <td style="text-align: center;"><strong>How to work</strong></td>
-<td style="text-align: center;"><strong>Emit</strong></td>
-<td style="text-align: center;"><strong>Example</strong></td>
+<td style="text-align: center;"><strong>Emission</strong></td>
+<td style="text-align: center;"><strong>Examples</strong></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;"><strong>Passive</strong></td>
@@ -184,34 +215,158 @@ satellite sensor</td>
 <tr class="odd">
 <td style="text-align: center;"><strong>Active</strong></td>
 <td style="text-align: center;">have an energy source for illumination</td>
-<td style="text-align: center;">emits electromagenic waves and then waits to receive</td>
+<td style="text-align: center;">emits electromagnetic waves and then waits to receive</td>
 <td style="text-align: center;">Radar, X-ray, LiDAR</td>
 </tr>
 </tbody>
 </table></li>
-<li><p><strong>Light scattering</strong> caused by atmosphere and distance (light reaches)</p>
+</ul>
+<div class="cell" data-layout-align="center" data-hash="wk_1_remote_sensing_cache/html/unnamed-chunk-1_7e64286baf7fa3aa9d391c38ec352691">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Passive-and-active-sensors-systems-working-principles-24.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://www.researchgate.net/figure/Passive-and-active-sensors-systems-working-principles-24_fig2_344464269">Nadhir Al-Ansari</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
 <ul>
-<li><p>The shorter the wavelength,</p>
+<li><p><strong>Electromagnetic radiation(EMR)</strong> from the sun isn’t automatically reflected. It interacts with Earth’s surface and chchangesefore hitting the sensor.- e.g.&nbsp;being absorbed by the surface, transmitted through the surface, or (sunlight is) scattered by particles in the atmosphere.</p></li>
+<li><p><strong>Sunlight</strong></p>
 <ul>
-<li><p>the stronger the energy</p></li>
-<li><p>the bluer it is <img src="images/Rainbow Emoji.png" class="img-fluid" width="15"></p></li>
+<li>An electromagnetic wave emitted by the sun.</li>
+<li>The shorter the wavelength,
+<ul>
+<li>the more robust the electromagnetic wave energy</li>
+<li>the bluer it is 🌈</li>
 </ul></li>
-<li><p>It makes distance measurement difficult (e.g.&nbsp;atmosphere, clouds) → <em>Alternative methods</em></p>
+<li><strong>The visible colour usually changes</strong> depending on <em>the distance</em> light reaches and the size of particles in the <em>atmosphere</em>.</li>
+</ul>
+<table class="table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 85%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Types</th>
+<th>Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Visible light</strong></td>
+<td><ul>
+<li><p>has a rainbow spectrum</p></li>
+<li><p>Particles or molecules scatter unabsorbed ultraviolet rays in the atmosphere, and we can only observe this.</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td>Infrared light</td>
+<td><ul>
+<li>invisible</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td>Ultraviolet light</td>
+<td><ul>
+<li><p>invisible</p></li>
+<li><p>absorbed mainly by the ozone layer</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+<div class="cell" data-layout-align="center" data-hash="wk_1_remote_sensing_cache/html/unnamed-chunk-2_98c84f60f39109bca421da26d85f4bdb">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sky4.en.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://spaceplace.nasa.gov/blue-sky/en/">NASA</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="light-scattering-methods-to-gauge-distance" class="level3">
+<h3 class="anchored" data-anchor-id="light-scattering-methods-to-gauge-distance">1.1.3 Light scattering &amp; methods to gauge distance 📐</h3>
 <ul>
-<li><p>Synthetic aperture radar (SAR) : Polarization, Fluoresence</p></li>
-<li><p>Bidirectional Reflectance Distribution Function (BRDF)</p></li>
-<li><p><strong>Atmospheric correction</strong>: Spatial, Spectral, Temporal, <strong>Radiometric</strong></p></li>
-</ul></li>
+<li><p>A phenomenon in which light with straightness is scattered in all directions by rough surfaces or tiny particles.</p></li>
+<li><p>It makes <strong>distance measurement difficult</strong> (e.g.&nbsp;atmosphere, clouds) → we need <em>alternative methods</em> to gauge distance</p>
+<ul>
+<li><p>Synthetic aperture radar (SAR): Polarization, Fluoresence</p></li>
+<li><p>Bidirectional Reflectance Distribution Function (BRDF): reflects visible and invisible parts simultaneously depending on the satellite angle</p></li>
+<li><p><strong>Atmospheric correction</strong>: remove what affected by the atmospheric scattering</p>
+<ul>
+<li>Low resolution means it has a large pixel size</li>
+<li>Four elements to decide the resolution of Remotely sensed data</li>
+</ul>
+<table class="table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 62%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Types</th>
+<th>Feature</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Spatial</td>
+<td><ul>
+<li>the size of the raster grid per pixel</li>
+</ul></td>
+<td>20cm / 30m</td>
+</tr>
+<tr class="even">
+<td>Spectral</td>
+<td><ul>
+<li>the number of bands it records data in</li>
+</ul></td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>Temporal</td>
+<td><ul>
+<li>the time it revisits</li>
+</ul></td>
+<td>daily / weekly / on demand</td>
+</tr>
+<tr class="even">
+<td><strong>Radiometric</strong></td>
+<td><ul>
+<li><p>identify differences in light or reflectance</p></li>
+<li><p><strong>lower the radiometric resolution, the lower the quality of the image</strong></p></li>
+</ul></td>
+<td>4/8/11-bit sensor</td>
+</tr>
+</tbody>
+</table></li>
 </ul></li>
 </ul>
 </section>
 </section>
 <section id="application" class="level2">
-<h2 class="anchored" data-anchor-id="application">Application</h2>
+<h2 class="anchored" data-anchor-id="application">1.2 Application</h2>
+<ul>
+<li><p>In forestry: Forest (soil) survey, pest damage investigation, forest fire damage investigation, tree species discrimination (confirming the distribution of coniferous or broadleaf trees) by taking seasonal aerial photographs.</p></li>
+<li><p>In architecture: to crack down on illegal buildings or check the boundaries of buildings / cadastral lines.</p></li>
+<li><p>to identify or prevent the degree of damage from natural disasters such as air pollution and floods.</p></li>
+<li><p>to check time-series changes in distances or spaces at specific locations.</p></li>
+<li><p>aerial photographs of famous tourist attractions are interpreted as artwork.</p></li>
+<li><p>When <strong>choosing the most appropriate sensor for the analysis</strong>, the following factors should be considered: Size of features, date range, revisit requirement, spectral sensitivity, cost etc.</p></li>
+</ul>
 </section>
 <section id="reflection" class="level2">
-<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
-<p>Source : https://emojiisland.com/pages/download-new-emoji-icons-in-png-ios-10</p>
+<h2 class="anchored" data-anchor-id="reflection">1.3 Reflection</h2>
+<p>I tend to check the location in advance with satellite images through Google Maps before I go to an unfamiliar place.</p>
+<p>Learning about remote sensing data in Week 1 reminded me that I have been unconsciously using tremendously advanced technology so far, and I have not recognised it because it is commonly used. In addition, it also reminded me that I used annual aerial photographs to check the phenomenon of the urban sprawl of Suwon City when I worked in South Korea.</p>
+<p>Considering that remote sensing data(e.g.&nbsp;aerial photographs) taken at equal intervals can soon be used as historical data for specific spaces, I thought it would be interesting to make future museums fill with 3D aerial photographs, not relics.</p>
 
 
 </section>
@@ -358,7 +513,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./wk_2_xaringan.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">2. Portfolio tools: Xaringan and Quarto</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">2. Remote Sensor: Lidar &amp; Radar</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
