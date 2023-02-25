@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./wk_4_policy.html" rel="next">
-<link href="./wk_2_xaringan.html" rel="prev">
+<link href="./wk_1_remote_sensing.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -105,22 +105,17 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wk_2_xaringan.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">2. Remote Sensor: Lidar &amp; Radar</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./wk_3_corrections.html" class="sidebar-item-text sidebar-link active">3. Corrections</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wk_4_policy.html" class="sidebar-item-text sidebar-link">4. Policy</a>
+  <a href="./wk_4_policy.html" class="sidebar-item-text sidebar-link">4. Policy: 2025 Jeju Master Plan</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wk_5_GEE.html" class="sidebar-item-text sidebar-link">5. Google Earth Engine</a>
+  <a href="./wk_5_GEE.html" class="sidebar-item-text sidebar-link">5. Google Earth Engine(GEE)</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -139,7 +134,10 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">3.1 Summary</a>
   <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">3.1.1</a></li>
+  <li><a href="#why-does-image-distortion-occur" id="toc-why-does-image-distortion-occur" class="nav-link" data-scroll-target="#why-does-image-distortion-occur">3.1.1 Why does image distortion occur?</a></li>
+  <li><a href="#types-of-correction" id="toc-types-of-correction" class="nav-link" data-scroll-target="#types-of-correction">3.1.2 Types of Correction</a></li>
+  <li><a href="#joining-data-sets-mosaicking" id="toc-joining-data-sets-mosaicking" class="nav-link" data-scroll-target="#joining-data-sets-mosaicking">3.1.3 Joining data sets = Mosaicking</a></li>
+  <li><a href="#image-enhancement" id="toc-image-enhancement" class="nav-link" data-scroll-target="#image-enhancement">3.1.4 Image Enhancement</a></li>
   </ul></li>
   <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">3.2 Application</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">3.3 Reflection</a></li>
@@ -167,18 +165,240 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>This is a learning diary for week 3.<br>
-Let’s find out about 000.</p>
+Let’s find out how to get a better image from remotely sensed data 🛰️</p>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">3.1 Summary</h2>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">3.1.1</h3>
+<section id="why-does-image-distortion-occur" class="level3">
+<h3 class="anchored" data-anchor-id="why-does-image-distortion-occur">3.1.1 Why does image distortion occur?</h3>
+<ul>
+<li>Sensor orientation (e.g.&nbsp;shadows depend on satellite angle)</li>
+<li>Topographical variation (e.g.&nbsp;hills, mountains)</li>
+<li>Wind (if it is taken by a plane)</li>
+<li>Rotation of the earth (from satellite)</li>
+<li>Curvature of the earth</li>
+<li>Atmospheric particles (absorption and scattering create the haze)</li>
+</ul>
+<p>So, we need to correct for inaccuracies of images!</p>
+</section>
+<section id="types-of-correction" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-correction">3.1.2 Types of Correction</h3>
+<section id="geometric-correction" class="level4">
+<h4 class="anchored" data-anchor-id="geometric-correction">3.1.2.1 Geometric correction</h4>
+<ul>
+<li>Use GCP(Ground Control Point): match known points in the image and a reference dataset</li>
+</ul>
+<div class="cell" data-layout-align="center" data-hash="wk_3_corrections_cache/html/unnamed-chunk-1_9cf5e0d97a8c11660ac6eaf8e799a7db">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Geometric-correction-procedures.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://www.researchgate.net/figure/Geometric-correction-procedures_fig7_320710942">Abdul Basith</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>Resampling (e.g.&nbsp;Nearest Neighbor, Linear, Cubic, Cubic spline)
+<ul>
+<li>Corrected Image(black line), Original Image(dotted line)</li>
+</ul></li>
+</ul>
+<div class="cell" data-layout-align="center" data-hash="wk_3_corrections_cache/html/unnamed-chunk-2_7d73042648e3a251b5dc5132ba0926fd">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Resampling-methods-a-nearest-neighbor-b-bilinear-interpolation-and-c-cubic.jpg" class="img-fluid figure-img" style="width:85.0%"></p>
+<p></p><figcaption class="figure-caption">(a) nearest neighbor, (b) bilinear interpolation, and (c) cubic convolution / Source: <a href="https://www.researchgate.net/figure/Resampling-methods-a-nearest-neighbor-b-bilinear-interpolation-and-c-cubic_fig2_340128695">Beshoy Nady</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="atmospheric-correction" class="level4">
+<h4 class="anchored" data-anchor-id="atmospheric-correction">3.1.2.2 Atmospheric correction</h4>
+<table class="table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 77%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Types</strong></td>
+<td><strong>Details</strong></td>
+</tr>
+<tr class="even">
+<td>Dark object subtraction(DOS)</td>
+<td>Find the brightest value based on the darkest value (assuming distortion was caused by air because air reflects light)</td>
+</tr>
+<tr class="odd">
+<td>Psuedo-invariant Features (PIFs)</td>
+<td>Adjust the brightness pixels using regression</td>
+</tr>
+<tr class="even">
+<td>Py6s</td>
+<td>Second Simulation of the Satellite Signal in the Solar Spectrum(6S), which can now be used through python</td>
+</tr>
+<tr class="odd">
+<td>Empirical Line Correction</td>
+<td>Path radiance, Atmospheric attenuation</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="orthorectificationtopographic-correction" class="level4">
+<h4 class="anchored" data-anchor-id="orthorectificationtopographic-correction">3.1.2.3 Orthorectification/Topographic correction</h4>
+<ul>
+<li>Sensor geometry and an elevation model are necessary to use orthorectification correction.</li>
+<li>It is important to use terrain data with high resolution and accuracy.</li>
+<li>Use Cosine correction with solar azimuth and the angle of local zenith.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/tgh.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://www.intermap.com/blog/orthorectification-in-a-nutshell">Eric Setyawan</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="radiometric-calibration" class="level4">
+<h4 class="anchored" data-anchor-id="radiometric-calibration">3.1.2.4 Radiometric calibration</h4>
+<ul>
+<li>Captures image brightness and assigns a Digital Number(DN)</li>
+<li>Compare DN with spectral radiance = Radiometric calibration</li>
+</ul>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>[Remote Sensing Jargon] 1. Energy</strong></p>
+<p>When the sun’s radiant energy 🌞 passes through the Earth’s atmosphere ☷ and touches the surface of an object 🪨,</p>
+<ul>
+<li><strong>Radiance</strong>
+<ul>
+<li><p>The amount of energy radiated from the object’s surface.</p></li>
+<li><p>Also includes the amount of energy from the surroundings + the amount of radiation reflected from the clouds above the surface.</p></li>
+</ul></li>
+<li><strong>Irradiance</strong>
+<ul>
+<li>The amount of energy entering the surface of an object.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>[Remote Sensing Jargon] 2. Influencing factors</strong></p>
+<p>Along the way from the SUN 🌞 to the sensor 🛰,</p>
+<ul>
+<li><strong>Digital Number</strong>
+<ul>
+<li>The intensity of the electromagnetic radiation per pixel.</li>
+<li>Pixel values aren’t calibrated and have no unit.</li>
+<li>Therefore, it is necessary to convert to ‘radiance’ or ‘reflectance’.</li>
+</ul></li>
+<li><strong>Radiance</strong>
+<ul>
+<li>Refer to the explanation above.</li>
+</ul></li>
+<li><strong>Reflectance</strong>
+<ul>
+<li>The ratio of radiation reflected on the surface.</li>
+<li>The object can be detected by correcting them with reflectivity values (since specific objects can be determined as reflectivity values).</li>
+<li>4 types of reflectance : TOA(Top of Atmosphere), Surface, Hemispherical, Apparent <div class="quarto-video ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/sOk5fFPSDBA" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="joining-data-sets-mosaicking" class="level3">
+<h3 class="anchored" data-anchor-id="joining-data-sets-mosaicking">3.1.3 Joining data sets = Mosaicking</h3>
+<ul>
+<li>It feathers the images together and creates a seamless mosaic or image(s)! (Look at the circle)</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mosaic.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://gis.stackexchange.com/questions/127310/how-to-create-a-mosaic-in-qgis-with-cutline-and-feathering-for-landsat-8-imagery">WhiteboxDev, stackexchange</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="image-enhancement" class="level3">
+<h3 class="anchored" data-anchor-id="image-enhancement">3.1.4 Image Enhancement</h3>
+<ul>
+<li>Imagery can be “improved/enhanced” based on the energy reflected and the contrast between features.</li>
+<li>There are many types of image enhancement
+<ul>
+<li><p>Piecewise Linear Contrast Stretch</p></li>
+<li><p>Ratio: Band ratioing, Normalized Burn Ratio</p></li>
+<li><p>Filtering: Using pixels</p></li>
+<li><p>PCA: Transform multi-spectral data into uncorrelated and smaller dataset</p></li>
+<li><p>Texture : use tonal(spectral) data, not texture(spatial variation of gray values)</p></li>
+<li><p>Fusion : where data from multiple sensors / sources is fused together</p></li>
+</ul></li>
+</ul>
 </section>
 </section>
 <section id="application" class="level2">
 <h2 class="anchored" data-anchor-id="application">3.2 Application</h2>
+<ul>
+<li>Remote sensing products are now Analysis Ready Data(ARD)! = Corrected data</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Proposed-automatic-orthorectification-chain-Different-steps-are-needed-to-generate-the.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://www.researchgate.net/figure/Proposed-automatic-orthorectification-chain-Different-steps-are-needed-to-generate-the_fig11_279156156">Krištof Oštir</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><p>According to the ‘Regulations for aerial photographic surveying’ notice of the National Geographic Information Institute in South Korea, there are articles related to aerial photography and correction to get aerial photos with clear resolution.</p></li>
+<li><p>Monitoring the changes in the national territory with a corrected photo/image is possible.</p>
+<ul>
+<li><p>Take aerial photography by dividing the country into urban areas (12cm resolution, 1-year cycle) and general regions (25cm resolution, 2-year cycle).</p></li>
+<li><p>After orthogonal processing and colour correction, produce user-specific (civilian and military) orthographic images nationwide.</p></li>
+</ul></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/orthogonal imagery_kr.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://www.ngii.go.kr/eng/content.do?sq=115">National Geographic Information Institute in South Korea</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">3.3 Reflection</h2>
+<p>I realised that remote sensing data, which is easily used in everyday life, come to my hands through various pre-processing(correction/calibration). And I also learned that numerous studies, efforts, and multiple methods had been considered until this became possible.</p>
+<p>Especially for Landsat data, I came to think about the benefits of open-source data in that the frequency of use and data utilization had increased exponentially since October 2008, when the Landsat data was open to the public. The story of Virginia Norwood was also interesting, who came up with the initial idea of Landsat technology.</p>
+<p>In addition, I also realised it is necessary to consider whether remote sensing data is properly pre-processed and suitable for use before data analysis even though remote sensing data provided these days uses corrected data.</p>
 
 
 </section>
@@ -319,13 +539,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./wk_2_xaringan.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">2. Remote Sensor: Lidar &amp; Radar</span></span>
+      <a href="./wk_1_remote_sensing.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">1. An Introduction to Remote Sensing</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./wk_4_policy.html" class="pagination-link">
-        <span class="nav-page-text">4. Policy</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">4. Policy: 2025 Jeju Master Plan</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

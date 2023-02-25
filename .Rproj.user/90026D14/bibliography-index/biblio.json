@@ -27,6 +27,115 @@
             "title": "Literate programming",
             "type": "article-journal",
             "volume": "27"
+        },
+        {
+            "URL": "https://earthengine.google.com/faq/",
+            "id": "faq-go",
+            "title": "FAQ  google earth engine",
+            "type": ""
+        },
+        {
+            "DOI": "10.3390/rs14102377",
+            "ISSN": "2072-4292",
+            "URL": "https://www.mdpi.com/2072-4292/14/10/2377",
+            "abstract": "Glacier snow line altitude (SLA) at the end of the ablation season is an indicator of the equilibrium line altitude (ELA), which is a key parameter for calculating and assessing glacier mass balance. Here, we present an automated algorithm to classify bare ice and snow cover on glaciers using Landsat series images and calculate the minimum annual glacier snow cover ratio (SCR) and maximum SLA for reference glaciers during the 1985&ndash;2020 period in Google Earth Engine. The calculated SCR and SLA values are verified using the observed glacier accumulation area ratio (AAR) and ELA. We select 14 reference glaciers from High Mountain Asia (HMA), the Caucasus, the Alps, and Western Canada, which represent four mountainous regions with extensive glacial development in the northern hemisphere. The SLA accuracy is  73",
+            "author": [
+                {
+                    "family": "Li",
+                    "given": "Xiang"
+                },
+                {
+                    "family": "Wang",
+                    "given": "Ninglian"
+                },
+                {
+                    "family": "Wu",
+                    "given": "Yuwei"
+                }
+            ],
+            "container-title": "Remote Sensing",
+            "id": "rs14102377",
+            "issue": "10",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "title": "Automated glacier snow line altitude calculation method using landsat series images in the google earth engine platform",
+            "type": "article-journal",
+            "volume": "14"
+        },
+        {
+            "DOI": "10.3390/rs14102377",
+            "URL": "https://www.mdpi.com/2072-4292/14/10/2377",
+            "author": [
+                {
+                    "family": "Li",
+                    "given": "Xiang"
+                },
+                {
+                    "family": "Wang",
+                    "given": "Ninglian"
+                },
+                {
+                    "family": "Wu",
+                    "given": "Yuwei"
+                }
+            ],
+            "container-title": "Remote Sensing",
+            "id": "li2022",
+            "issue": "10",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        1
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 10 Publisher: Multidisciplinary Digital Publishing Institute",
+            "page": "2377",
+            "title": "Automated Glacier Snow Line Altitude Calculation Method Using Landsat Series Images in the Google Earth Engine Platform",
+            "type": "article-journal",
+            "volume": "14"
+        },
+        {
+            "DOI": "10.3390/rs14102377",
+            "URL": "https://www.mdpi.com/2072-4292/14/10/2377",
+            "author": [
+                {
+                    "family": "Li",
+                    "given": "Xiang"
+                },
+                {
+                    "family": "Wang",
+                    "given": "Ninglian"
+                },
+                {
+                    "family": "Wu",
+                    "given": "Yuwei"
+                }
+            ],
+            "container-title": "Remote Sensing",
+            "id": "li2022a",
+            "issue": "10",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        1
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 10 Publisher: Multidisciplinary Digital Publishing Institute",
+            "page": "2377",
+            "title": "Automated Glacier Snow Line Altitude Calculation Method Using Landsat Series Images in the Google Earth Engine Platform",
+            "type": "article-journal",
+            "volume": "14"
         }
     ],
     "project_biblios": [

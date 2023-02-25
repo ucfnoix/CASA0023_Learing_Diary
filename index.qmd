@@ -9,7 +9,7 @@ knitr::include_graphics('images/me.jpg')
 
 ## **Who am I?**
 
--   Love to play and eat all the time! (Clotted cream first and jam on top... no mercy)
+-   It is my joy and why I study urban planning: the happiness many people enjoy in their daily lives in the space I created.
 -   Cats save the world ![](images/image-665550276.png){width="16" height="17"}\
     Yes, she is a stray cat Sam-sae-gi in my house that I look after!
 

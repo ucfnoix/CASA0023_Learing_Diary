@@ -1,12 +1,141 @@
 # 3. Corrections {.unnumbered}
 
 This is a learning diary for week 3.\
-Let's find out about 000.
+Let's find out how to get a better image from remotely sensed data 🛰️
 
-## 3.1 Summary 
+## 3.1 Summary
 
-### 3.1.1 
+### 3.1.1 Why does image distortion occur?
+
+-   Sensor orientation (e.g. shadows depend on satellite angle)
+-   Topographical variation (e.g. hills, mountains)
+-   Wind (if it is taken by a plane)
+-   Rotation of the earth (from satellite)
+-   Curvature of the earth
+-   Atmospheric particles (absorption and scattering create the haze)
+
+So, we need to correct for inaccuracies of images!
+
+### 3.1.2 Types of Correction
+
+#### 3.1.2.1 Geometric correction
+
+-   Use GCP(Ground Control Point): match known points in the image and a reference dataset
+
+```{r echo=FALSE, out.width = "85%", fig.align='center', cache=TRUE, fig.cap="Source: [Abdul Basith](https://www.researchgate.net/figure/Geometric-correction-procedures_fig7_320710942)"}
+knitr::include_graphics('images/Geometric-correction-procedures.png')
+```
+
+-   Resampling (e.g. Nearest Neighbor, Linear, Cubic, Cubic spline)
+    -   Corrected Image(black line), Original Image(dotted line)
+
+```{r echo=FALSE, out.width = "85%", fig.align='center', cache=TRUE, fig.cap="(a) nearest neighbor, (b) bilinear interpolation, and (c) cubic convolution / Source: [Beshoy Nady](https://www.researchgate.net/figure/Resampling-methods-a-nearest-neighbor-b-bilinear-interpolation-and-c-cubic_fig2_340128695)"}
+knitr::include_graphics('images/Resampling-methods-a-nearest-neighbor-b-bilinear-interpolation-and-c-cubic.jpg')
+```
+
+#### 3.1.2.2 Atmospheric correction
+
+|                                  |                                                                                                                        |
+|----------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| **Types**                        | **Details**                                                                                                            |
+| Dark object subtraction(DOS)     | Find the brightest value based on the darkest value (assuming distortion was caused by air because air reflects light) |
+| Psuedo-invariant Features (PIFs) | Adjust the brightness pixels using regression                                                                          |
+| Py6s                             | Second Simulation of the Satellite Signal in the Solar Spectrum(6S), which can now be used through python              |
+| Empirical Line Correction        | Path radiance, Atmospheric attenuation                                                                                 |
+
+#### 3.1.2.3 Orthorectification/Topographic correction
+
+-   Sensor geometry and an elevation model are necessary to use orthorectification correction.
+-   It is important to use terrain data with high resolution and accuracy.
+-   Use Cosine correction with solar azimuth and the angle of local zenith.
+
+```{r echo=FALSE, out.width = "85%", fig.align='center', fig.cap="Source: [Eric Setyawan](https://www.intermap.com/blog/orthorectification-in-a-nutshell)"}
+knitr::include_graphics('images/tgh.png')
+```
+
+#### 3.1.2.4 Radiometric calibration
+
+-   Captures image brightness and assigns a Digital Number(DN)
+-   Compare DN with spectral radiance = Radiometric calibration
+
+::: callout-note
+**\[Remote Sensing Jargon\] 1. Energy**
+
+When the sun's radiant energy 🌞 passes through the Earth's atmosphere ☷ and touches the surface of an object 🪨,
+
+-   **Radiance**
+    -   The amount of energy radiated from the object's surface.
+
+    -   Also includes the amount of energy from the surroundings + the amount of radiation reflected from the clouds above the surface.
+-   **Irradiance**
+    -   The amount of energy entering the surface of an object.
+:::
+
+::: callout-note
+**\[Remote Sensing Jargon\] 2. Influencing factors**
+
+Along the way from the SUN 🌞 to the sensor 🛰,
+
+-   **Digital Number**
+    -   The intensity of the electromagnetic radiation per pixel.
+    -   Pixel values aren't calibrated and have no unit.
+    -   Therefore, it is necessary to convert to 'radiance' or 'reflectance'.
+-   **Radiance**
+    -   Refer to the explanation above.
+-   **Reflectance**
+    -   The ratio of radiation reflected on the surface.
+    -   The object can be detected by correcting them with reflectivity values (since specific objects can be determined as reflectivity values).
+    -   4 types of reflectance : TOA(Top of Atmosphere), Surface, Hemispherical, Apparent {{< video https://youtu.be/sOk5fFPSDBA >}}
+:::
+
+### 3.1.3 Joining data sets = Mosaicking
+
+-   It feathers the images together and creates a seamless mosaic or image(s)! (Look at the circle)
+
+```{r echo=FALSE, out.width = "85%", fig.align='center', fig.cap="Source: [WhiteboxDev, stackexchange](https://gis.stackexchange.com/questions/127310/how-to-create-a-mosaic-in-qgis-with-cutline-and-feathering-for-landsat-8-imagery)"}
+knitr::include_graphics('images/mosaic.png')
+```
+
+### 3.1.4 Image Enhancement
+
+-   Imagery can be "improved/enhanced" based on the energy reflected and the contrast between features.
+-   There are many types of image enhancement
+    -   Piecewise Linear Contrast Stretch
+
+    -   Ratio: Band ratioing, Normalized Burn Ratio
+
+    -   Filtering: Using pixels
+
+    -   PCA: Transform multi-spectral data into uncorrelated and smaller dataset
+
+    -   Texture : use tonal(spectral) data, not texture(spatial variation of gray values)
+
+    -   Fusion : where data from multiple sensors / sources is fused together
 
 ## 3.2 Application
 
+-   Remote sensing products are now Analysis Ready Data(ARD)! = Corrected data
+
+```{r echo=FALSE, out.width = "85%", fig.align='center', fig.cap="Source: [Krištof Oštir](https://www.researchgate.net/figure/Proposed-automatic-orthorectification-chain-Different-steps-are-needed-to-generate-the_fig11_279156156)"}
+knitr::include_graphics('images/Proposed-automatic-orthorectification-chain-Different-steps-are-needed-to-generate-the.png')
+```
+
+-   According to the 'Regulations for aerial photographic surveying' notice of the National Geographic Information Institute in South Korea, there are articles related to aerial photography and correction to get aerial photos with clear resolution.
+
+-   Monitoring the changes in the national territory with a corrected photo/image is possible.
+
+    -   Take aerial photography by dividing the country into urban areas (12cm resolution, 1-year cycle) and general regions (25cm resolution, 2-year cycle).
+
+    -   After orthogonal processing and colour correction, produce user-specific (civilian and military) orthographic images nationwide.
+
+```{r echo=FALSE, out.width = "85%", fig.align='center', fig.cap="Source: [National Geographic Information Institute in South Korea](https://www.ngii.go.kr/eng/content.do?sq=115)"}
+knitr::include_graphics('images/orthogonal imagery_kr.png')
+```
+
 ## 3.3 Reflection
+
+I realised that remote sensing data, which is easily used in everyday life, come to my hands through various pre-processing(correction/calibration). And I also learned that numerous studies, efforts, and multiple methods had been considered until this became possible.
+
+Especially for Landsat data, I came to think about the benefits of open-source data in that the frequency of use and data utilization had increased exponentially since October 2008, when the Landsat data was open to the public. The story of Virginia Norwood was also interesting, who came up with the initial idea of Landsat technology.
+
+In addition, I also realised it is necessary to consider whether remote sensing data is properly pre-processed and suitable for use before data analysis even though remote sensing data provided these days uses corrected data.

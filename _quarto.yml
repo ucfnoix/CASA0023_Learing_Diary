@@ -13,6 +13,7 @@ book:
     - wk_3_corrections.qmd
     - wk_4_policy.qmd
     - wk_5_GEE.qmd
+    #- wek_6_classification.qmd
     - references.qmd
 
 
