@@ -13,7 +13,9 @@ book:
     - wk_3_corrections.qmd
     - wk_4_policy.qmd
     - wk_5_GEE.qmd
-    #- wek_6_classification.qmd
+    - wk_6_classification.qmd
+    #- wk_7_classification_2.qmd
+    #- wk_8_temperature.qmd
     - references.qmd
 
 

@@ -1,0 +1,17 @@
+# 8. Temperature {.unnumbered}
+
+This is a learning diary for week 8.\
+Let's find out ~!
+
+## 8.1 Summary
+
+### 8.1.1 What is GEE?
+
+```{r echo=FALSE, out.width = "90%", fig.align='center', cache=TRUE, fig.cap= "Careser Glacier changes during the 1986–2020 period."}
+knitr::include_graphics('images/remotesensing-14-02377-g011.png')
+```
+
+## 8.2 Application
+
+
+## 8.3 Reflection

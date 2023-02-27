@@ -19,7 +19,7 @@ Let's find out what GEE is and how to use it with various functions!
 ### 5.1.2 Image components in GEE
 
 |                      |                                                     |
-|-----------------------|------------------------------------------------|
+|------------------------|------------------------------------------------|
 | **Raster**           | an image                                            |
 | **Image Collection** | several images or polygons = a stack of raster data |
 
@@ -66,7 +66,8 @@ knitr::include_graphics('images/Pyramids.png')
 
 It is being used for various studies of the global climate, topography, and satellite image data accumulated by Google through GEE, such as surveys on water depletion or the devastation of the Amazon rainforest.
 
-In the case of the polar glacier monitoring, we can see that it is the decrease in glacial volume over time, as [@li2022a] mentioned. 
+In the case of the polar glacier monitoring, we can see that it is the decrease in glacial volume over time, as [@li2022a] mentioned.
+
 ```{r echo=FALSE, out.width = "90%", fig.align='center', cache=TRUE, fig.cap= "Careser Glacier changes during the 1986–2020 period. (a) The newNIR band Landsat images for Careser Glacier in 1986, 1996, 2009 and 2020. (b) Latest Google Earth image for Careser Glacier."}
 knitr::include_graphics('images/remotesensing-14-02377-g011.png')
 ```

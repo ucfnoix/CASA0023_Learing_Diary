@@ -3,6 +3,12 @@
 This is a learning diary for week 2.\
 Let's find out about Lidar and Radar!
 
+```{r, echo = FALSE, out.width='40%'}
+xaringanExtra::embed_xaringan(
+    url = "https://ucfnoix.github.io/CASA0023_wk2_xaringan/"
+    ratio = "16:9")
+```
+
 To view this presentation full-screen, [click here](https://ucfnoix.github.io/CASA0023_wk2_xaringan/).
 
 

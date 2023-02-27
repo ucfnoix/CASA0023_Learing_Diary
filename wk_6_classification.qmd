@@ -1,0 +1,44 @@
+# 6. Classification I {.unnumbered}
+
+This is a learning diary for week 6.\
+Let's find out how to analyse remotely sensed images, especially Land Use/Land Cover(LULC), with various ways!
+
+## 6.1 Summary
+
+### 6.1.1 How do we know? 🤔
+Follow your intuition! We can make judgments or conclusions about specific knowledge from our experience. It is called **inductive learning** and can be leveraged to analyze remote-sensing images.
+
+### 6.1.2 How does my computer know? 🤖
+Like using human knowledge, **machine learning methods (Training data 70% : Testing data 30%)** based on **decision trees** are used to be learned how to find specific patterns in remote sensing data so that computers can judge themselves.
+
+### 6.1.3 Different methods of classification
+
+#### 6.1.3.1 Classification trees
+ - classify data into two or more discrete categories
+When we create a decision tree the final leaves might be a mixture of the categories = impure
+We quantify this with the Gini Impurity
+
+#### 6.1.3.2 Regression trees
+ - predict continuous dependent variable 
+ - Use the Sum of the Squared Residuals
+ - Use the threshold that gives smallest SSR = always the lowest value (to prevent over fitting) = similar to gini impurity
+  *Weakest link pruning
+
+#### 6.1.3.3 Random forest
+- supervised : Pattern recognition or machine learning / Classifier learns patterns in the data / Parametric (normal distribution) or non parametric (not normal)
+- UnSupervised : clustering, k-means, ISODATA, cluster busting
+
+#### 6.1.3.4 Maximum likelihood
+: based on probability information
+
+#### 6.1.3.5 Support Vector Machine (SVM)
+
+```{r echo=FALSE, out.width = "90%", fig.align='center', cache=TRUE}
+knitr::include_graphics('images/remotesensing-14-02377-g011.png')
+```
+
+## 6.2 Application
+
+
+## 6.3 Reflection
+
