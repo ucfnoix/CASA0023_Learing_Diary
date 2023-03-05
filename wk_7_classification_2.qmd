@@ -1,7 +1,7 @@
 # 7. Classification II {.unnumbered}
 
 This is a learning diary for week 7.\
-Let's find out ~!
+Let's find out \~!
 
 ## 7.1 Summary
 
@@ -12,6 +12,5 @@ knitr::include_graphics('images/remotesensing-14-02377-g011.png')
 ```
 
 ## 7.2 Application
-
 
 ## 7.3 Reflection

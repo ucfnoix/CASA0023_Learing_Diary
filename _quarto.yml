@@ -9,7 +9,8 @@ book:
   chapters:
     - index.qmd # my information
     - wk_1_remote_sensing.qmd
-    - wk_2_xaringan.qmd
+    # - wk_2_xaringan.qmd
+    - wk_2_xaringan_embed_code.qmd
     - wk_3_corrections.qmd
     - wk_4_policy.qmd
     - wk_5_GEE.qmd

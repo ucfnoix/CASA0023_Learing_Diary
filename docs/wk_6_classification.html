@@ -105,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wk_2_xaringan.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">2. Remote Sensor: Lidar &amp; Radar</span></a>
+  <a href="./wk_2_xaringan_embed_code.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">2. Remote Sensor: Lidar &amp; Radar</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -147,6 +147,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#how-do-we-know" id="toc-how-do-we-know" class="nav-link" data-scroll-target="#how-do-we-know">6.1.1 How do we know? 🤔</a></li>
   <li><a href="#how-does-my-computer-know" id="toc-how-does-my-computer-know" class="nav-link" data-scroll-target="#how-does-my-computer-know">6.1.2 How does my computer know? 🤖</a></li>
   <li><a href="#different-methods-of-classification" id="toc-different-methods-of-classification" class="nav-link" data-scroll-target="#different-methods-of-classification">6.1.3 Different methods of classification</a></li>
+  <li><a href="#how-to-prevent-overfitting-of-results" id="toc-how-to-prevent-overfitting-of-results" class="nav-link" data-scroll-target="#how-to-prevent-overfitting-of-results">6.1.4 How to prevent overfitting of results?</a></li>
+  <li><a href="#three-types-of-image-classification" id="toc-three-types-of-image-classification" class="nav-link" data-scroll-target="#three-types-of-image-classification">6.1.5 Three types of Image Classification</a></li>
   </ul></li>
   <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">6.2 Application</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">6.3 Reflection</a></li>
@@ -190,37 +192,174 @@ Let’s find out how to analyse remotely sensed images, especially Land Use/Land
 <section id="classification-trees" class="level4">
 <h4 class="anchored" data-anchor-id="classification-trees">6.1.3.1 Classification trees</h4>
 <ul>
-<li>classify data into two or more discrete categories When we create a decision tree the final leaves might be a mixture of the categories = impure We quantify this with the Gini Impurity</li>
+<li>Classify data into two or more discrete categories
+<ul>
+<li>We cannot only know the prediction results but also explain why we predicted that.</li>
+<li>Output variable is <strong>categorised</strong> such as sex, nationality or position in the company.</li>
+<li>It is like playing the guessing game ‘Who am I?’</li>
+</ul></li>
+<li>When creating a decision tree, the final leaves might be a mixture of the categories = impure
+<ul>
+<li>Need to quantify the result with the <strong>Gini Impurity</strong></li>
+</ul></li>
+<li>Top-down approach</li>
 </ul>
+<div class="cell" data-layout-align="center" data-hash="wk_6_classification_cache/html/unnamed-chunk-1_85279078c07a91ad953cda06282541a6">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/20230305_152335.png" class="img-fluid figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="regression-trees" class="level4">
 <h4 class="anchored" data-anchor-id="regression-trees">6.1.3.2 Regression trees</h4>
 <ul>
-<li>predict continuous dependent variable</li>
-<li>Use the Sum of the Squared Residuals</li>
-<li>Use the threshold that gives smallest SSR = always the lowest value (to prevent over fitting) = similar to gini impurity *Weakest link pruning</li>
-</ul>
-</section>
-<section id="random-forest" class="level4">
-<h4 class="anchored" data-anchor-id="random-forest">6.1.3.3 Random forest</h4>
+<li><p>Decision Tree model with regression</p></li>
+<li><p>It predicts results based on the predictors <strong>that best reduces the Sum of the Squared Residuals(SSR)</strong>. = similar to Gini Impurity</p>
 <ul>
-<li>supervised : Pattern recognition or machine learning / Classifier learns patterns in the data / Parametric (normal distribution) or non parametric (not normal)</li>
-<li>UnSupervised : clustering, k-means, ISODATA, cluster busting</li>
+<li>Output variable is <strong>continuous variable</strong> such as salary, weight or width.</li>
+</ul></li>
+<li><p>Bottom-up approach</p></li>
 </ul>
 </section>
-<section id="maximum-likelihood" class="level4">
-<h4 class="anchored" data-anchor-id="maximum-likelihood">6.1.3.4 Maximum likelihood</h4>
-<p>: based on probability information</p>
 </section>
-<section id="support-vector-machine-svm" class="level4">
-<h4 class="anchored" data-anchor-id="support-vector-machine-svm">6.1.3.5 Support Vector Machine (SVM)</h4>
-<div class="cell" data-layout-align="center" data-hash="wk_6_classification_cache/html/unnamed-chunk-1_7a7753db0ad18bba370bf96bb455dc39">
+<section id="how-to-prevent-overfitting-of-results" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-prevent-overfitting-of-results">6.1.4 How to prevent overfitting of results?</h3>
+<section id="weakest-link-pruning" class="level4">
+<h4 class="anchored" data-anchor-id="weakest-link-pruning">6.1.4.1 Weakest link pruning</h4>
+<ul>
+<li>There are two parameters: <strong>depth</strong> and <strong>node</strong>.</li>
+<li>After making a large tree (20 is often used) by increasing the depth and nodes, prune the subtree again and select it as a model.</li>
+</ul>
+<div class="cell" data-layout-align="center" data-hash="wk_6_classification_cache/html/unnamed-chunk-2_a0829eb82148272c860d4f0e79de2769">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/remotesensing-14-02377-g011.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<p><img src="images/decision-tree-subtrees.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<p></p><figcaption class="figure-caption">Source:<a href="http://mlwiki.org/index.php/Cost-Complexity_Pruning">ML Wiki</a></figcaption><p></p>
 </figure>
 </div>
+</div>
+</div>
+</section>
+<section id="random-forest" class="level4">
+<h4 class="anchored" data-anchor-id="random-forest">6.1.4.2 Random forest</h4>
+<ul>
+<li>One of the ensemble machine learning model.</li>
+<li>Grow loads of random decision trees like a forest!
+<ul>
+<li>All decision trees are grown by randomly extracting sub-datasets.</li>
+<li><strong>Bagging</strong> : a single data may be selected multiple times as it allows redundancy.</li>
+<li>And find the overall value which got more votes based on all the trees.</li>
+</ul></li>
+</ul>
+<div class="cell" data-layout-align="center" data-hash="wk_6_classification_cache/html/unnamed-chunk-3_32ee4caf3b53bd70be10ba717e96a4f7">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/how-random-forest-classifier-work.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<p></p><figcaption class="figure-caption">Source:<a href="https://www.freecodecamp.org/news/how-to-use-the-tree-based-algorithm-for-machine-learning/">freeCodeCamp</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="three-types-of-image-classification" class="level3">
+<h3 class="anchored" data-anchor-id="three-types-of-image-classification">6.1.5 Three types of Image Classification</h3>
+<table class="table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 32%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Supervised Classification</th>
+<th>Unsupervised Classification</th>
+<th>Object-Based Image Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pattern recognition or machine learning</td>
+<td>clustering</td>
+<td>TBC in week 7</td>
+</tr>
+<tr class="even">
+<td>Parametric (normal distribution) : Maximum likelihood</td>
+<td>k-means</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>non parametric (not normal) : Support Vector Machine</td>
+<td>ISODATA</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>cluster busting = masking (removing unsuitable clusters)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<section id="maximum-likelihood-eastimation-mle" class="level4">
+<h4 class="anchored" data-anchor-id="maximum-likelihood-eastimation-mle">6.1.5.1 Maximum Likelihood Eastimation (MLE)</h4>
+<ul>
+<li>Likelihood : To see what <strong>probability</strong> is in a distribution existing an event or phenomenon</li>
+<li>MLE : Find <strong>the maximum likelihood</strong> that best describes a given data</li>
+<li>Takes the image(landcover) and assigns pixel to the most probable land cover type.</li>
+</ul>
+</section>
+<section id="support-vector-machine-svm" class="level4">
+<h4 class="anchored" data-anchor-id="support-vector-machine-svm">6.1.5.2 Support Vector Machine (SVM)</h4>
+<ul>
+<li><p>Used primarily for classification (pattern recognition) and regression analysis</p>
+<table class="table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 62%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Type</strong></td>
+<td><strong>Aim</strong></td>
+</tr>
+<tr class="even">
+<td>Existing classification methods</td>
+<td><strong>minimise</strong> error rate</td>
+</tr>
+<tr class="odd">
+<td>Support Vector Machine (SVM)</td>
+<td><strong>maximise</strong> the space between the two categories</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+<div class="cell" data-layout-align="center" data-hash="wk_6_classification_cache/html/unnamed-chunk-4_b959bb94f487cf032cd10c1e4e66c648">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/20230305_210424.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<p></p><figcaption class="figure-caption">Source:<a href="https://towardsdatascience.com/support-vector-machine-simply-explained-fee28eba5496">Lilly Chen</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip With #SVM Hashtag
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>#kernel trick #soft margin</p>
 </div>
 </div>
 </section>
@@ -228,9 +367,17 @@ Let’s find out how to analyse remotely sensed images, especially Land Use/Land
 </section>
 <section id="application" class="level2">
 <h2 class="anchored" data-anchor-id="application">6.2 Application</h2>
+<ul>
+<li>An example of SVM?</li>
+</ul>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">6.3 Reflection</h2>
+<ul>
+<li>The key to what we learned this week is that each classification method essentially slices the data differently.</li>
+<li>It was interesting that the ML technique was used to analyse the remote sensing data. In particular, it was amazing that the SVM method separates data using hyperplane, going further from the existing classification methods.</li>
+<li>It still takes work to fully understand the mathematical principles of each classification method (which makes me feel dizzy every time I learn it 🙄). However, it was worth remembering that the criteria that we intuitively thought and classified were developed for computers and applied for.</li>
+</ul>
 
 
 </section>

@@ -25,7 +25,7 @@
     "href": "index.html#my-background-is",
     "title": "Eunyoung’s Learning Diary",
     "section": "My background is…",
-    "text": "My background is…\n\nMSc., Urban Spatial Science, University College London, U.K.\nB.A., Urban and Regional Planning, Dankook University, Rep. of Korea"
+    "text": "My background is…\n\nMSc., Urban Spatial Science, University College London, U.K.\nB.A., Urban and Regional Planning, Dankook University, Rep. of Korea\n\nI worked as a civil servant in the urban planning area for five years in Korea and also worked in real estate finance. I want to apply the knowledge I have learned in CASA to smart city initiatives and revitalise towns and agriculture in the countryside. (This is why I am taking this module for later 🙂)"
   },
   {
     "objectID": "index.html#what-i-am-interested-in",
@@ -60,7 +60,7 @@
     "href": "wk_2_xaringan.html",
     "title": "1  2. Remote Sensor: Lidar & Radar",
     "section": "",
-    "text": "This is a learning diary for week 2.\nLet’s find out about Lidar and Radar!\nTo view this presentation full-screen, click here."
+    "text": "library(xaringanExtra)\nThis is a learning diary for week 2.\nLet’s find out about Lidar and Radar!\nTo view this presentation full-screen, click here."
   },
   {
     "objectID": "wk_3_corrections.html#summary",
@@ -130,20 +130,69 @@
     "href": "wk_6_classification.html#summary",
     "title": "6. Classification I",
     "section": "6.1 Summary",
-    "text": "6.1 Summary\n\n6.1.1 How do we know? 🤔\nFollow your intuition! We can make judgments or conclusions about specific knowledge from our experience. It is called inductive learning and can be leveraged to analyze remote-sensing images.\n\n\n6.1.2 How does my computer know? 🤖\nLike using human knowledge, machine learning methods (Training data 70% : Testing data 30%) based on decision trees are used to be learned how to find specific patterns in remote sensing data so that computers can judge themselves.\n\n\n6.1.3 Different methods of classification\n\n6.1.3.1 Classification trees\n\nclassify data into two or more discrete categories When we create a decision tree the final leaves might be a mixture of the categories = impure We quantify this with the Gini Impurity\n\n\n\n6.1.3.2 Regression trees\n\npredict continuous dependent variable\nUse the Sum of the Squared Residuals\nUse the threshold that gives smallest SSR = always the lowest value (to prevent over fitting) = similar to gini impurity *Weakest link pruning\n\n\n\n6.1.3.3 Random forest\n\nsupervised : Pattern recognition or machine learning / Classifier learns patterns in the data / Parametric (normal distribution) or non parametric (not normal)\nUnSupervised : clustering, k-means, ISODATA, cluster busting\n\n\n\n6.1.3.4 Maximum likelihood\n: based on probability information\n\n\n6.1.3.5 Support Vector Machine (SVM)"
+    "text": "6.1 Summary\n\n6.1.1 How do we know? 🤔\nFollow your intuition! We can make judgments or conclusions about specific knowledge from our experience. It is called inductive learning and can be leveraged to analyze remote-sensing images.\n\n\n6.1.2 How does my computer know? 🤖\nLike using human knowledge, machine learning methods (Training data 70% : Testing data 30%) based on decision trees are used to be learned how to find specific patterns in remote sensing data so that computers can judge themselves.\n\n\n6.1.3 Different methods of classification\n\n6.1.3.1 Classification trees\n\nClassify data into two or more discrete categories\n\nWe cannot only know the prediction results but also explain why we predicted that.\nOutput variable is categorised such as sex, nationality or position in the company.\nIt is like playing the guessing game ‘Who am I?’\n\nWhen creating a decision tree, the final leaves might be a mixture of the categories = impure\n\nNeed to quantify the result with the Gini Impurity\n\nTop-down approach\n\n\n\n\n\n\n\n\n\n\n\n\n6.1.3.2 Regression trees\n\nDecision Tree model with regression\nIt predicts results based on the predictors that best reduces the Sum of the Squared Residuals(SSR). = similar to Gini Impurity\n\nOutput variable is continuous variable such as salary, weight or width.\n\nBottom-up approach\n\n\n\n\n6.1.4 How to prevent overfitting of results?\n\n6.1.4.1 Weakest link pruning\n\nThere are two parameters: depth and node.\nAfter making a large tree (20 is often used) by increasing the depth and nodes, prune the subtree again and select it as a model.\n\n\n\n\n\n\nSource:ML Wiki\n\n\n\n\n\n\n6.1.4.2 Random forest\n\nOne of the ensemble machine learning model.\nGrow loads of random decision trees like a forest!\n\nAll decision trees are grown by randomly extracting sub-datasets.\nBagging : a single data may be selected multiple times as it allows redundancy.\nAnd find the overall value which got more votes based on all the trees.\n\n\n\n\n\n\n\nSource:freeCodeCamp\n\n\n\n\n\n\n\n6.1.5 Three types of Image Classification\n\n\n\n\n\n\n\n\nSupervised Classification\nUnsupervised Classification\nObject-Based Image Analysis\n\n\n\n\nPattern recognition or machine learning\nclustering\nTBC in week 7\n\n\nParametric (normal distribution) : Maximum likelihood\nk-means\n\n\n\nnon parametric (not normal) : Support Vector Machine\nISODATA\n\n\n\n\ncluster busting = masking (removing unsuitable clusters)\n\n\n\n\n\n6.1.5.1 Maximum Likelihood Eastimation (MLE)\n\nLikelihood : To see what probability is in a distribution existing an event or phenomenon\nMLE : Find the maximum likelihood that best describes a given data\nTakes the image(landcover) and assigns pixel to the most probable land cover type.\n\n\n\n6.1.5.2 Support Vector Machine (SVM)\n\nUsed primarily for classification (pattern recognition) and regression analysis\n\n\n\n\n\n\n\nType\nAim\n\n\nExisting classification methods\nminimise error rate\n\n\nSupport Vector Machine (SVM)\nmaximise the space between the two categories\n\n\n\n\n\n\n\n\n\nSource:Lilly Chen\n\n\n\n\n\n\n\n\n\n\nTip With #SVM Hashtag\n\n\n\n#kernel trick #soft margin"
   },
   {
     "objectID": "wk_6_classification.html#application",
     "href": "wk_6_classification.html#application",
     "title": "6. Classification I",
     "section": "6.2 Application",
-    "text": "6.2 Application"
+    "text": "6.2 Application\n\nAn example of SVM?"
   },
   {
     "objectID": "wk_6_classification.html#reflection",
     "href": "wk_6_classification.html#reflection",
     "title": "6. Classification I",
     "section": "6.3 Reflection",
-    "text": "6.3 Reflection"
+    "text": "6.3 Reflection\n\nThe key to what we learned this week is that each classification method essentially slices the data differently.\nIt was interesting that the ML technique was used to analyse the remote sensing data. In particular, it was amazing that the SVM method separates data using hyperplane, going further from the existing classification methods.\nIt still takes work to fully understand the mathematical principles of each classification method (which makes me feel dizzy every time I learn it 🙄). However, it was worth remembering that the criteria that we intuitively thought and classified were developed for computers and applied for."
+  },
+  {
+    "objectID": "wk_2_xaringan_embed_code.html",
+    "href": "wk_2_xaringan_embed_code.html",
+    "title": "1  2. Remote Sensor: Lidar & Radar",
+    "section": "",
+    "text": "This is a learning diary for week 2.\nLet’s find out about Lidar and Radar!\n\n\n\n\n\n\n\n\nTo view this presentation full-screen, click here."
+  },
+  {
+    "objectID": "wk_7_classification_2.html#summary",
+    "href": "wk_7_classification_2.html#summary",
+    "title": "7. Classification II",
+    "section": "7.1 Summary",
+    "text": "7.1 Summary\n\n7.1.1 What is GEE?\n\n\n\n\n\nCareser Glacier changes during the 1986–2020 period."
+  },
+  {
+    "objectID": "wk_7_classification_2.html#application",
+    "href": "wk_7_classification_2.html#application",
+    "title": "7. Classification II",
+    "section": "7.2 Application",
+    "text": "7.2 Application"
+  },
+  {
+    "objectID": "wk_7_classification_2.html#reflection",
+    "href": "wk_7_classification_2.html#reflection",
+    "title": "7. Classification II",
+    "section": "7.3 Reflection",
+    "text": "7.3 Reflection"
+  },
+  {
+    "objectID": "index.html#special-thanks-to",
+    "href": "index.html#special-thanks-to",
+    "title": "Eunyoung’s Learning Diary",
+    "section": "Special thanks to…",
+    "text": "Special thanks to…\nDr Andrew Maclachlan, for teaching us this amazing RSCE module! Making my own learning diary every week is the happiest time for me ✏️\nOkay, let’s wrap up my brief introduction here and look around my diary now"
+  },
+  {
+    "objectID": "wk_6_classification.html#regression-trees",
+    "href": "wk_6_classification.html#regression-trees",
+    "title": "6. Classification I",
+    "section": "#### 6.1.3.2 Regression trees",
+    "text": "#### 6.1.3.2 Regression trees\n- Output variable can be continuous dependent variable such as salary, weight or width.\n\nUse the Sum of the Squared Residuals\nUse the threshold that gives smallest SSR = always the lowest value (to prevent over fitting) = similar to gini impurity *Weakest link pruning\n\n\n6.1.3.3 Random forest\n\nsupervised : Pattern recognition or machine learning / Classifier learns patterns in the data / Parametric (normal distribution) or non parametric (not normal)\nUnSupervised : clustering, k-means, ISODATA, cluster busting\n\n\n\n6.1.3.4 Maximum likelihood\n: based on probability information\n\n\n6.1.3.5 Support Vector Machine (SVM)"
+  },
+  {
+    "objectID": "wk_6_classification.html#support-vector-machine-svm",
+    "href": "wk_6_classification.html#support-vector-machine-svm",
+    "title": "6. Classification I",
+    "section": "#### 6.1.5.2 Support Vector Machine (SVM)",
+    "text": "#### 6.1.5.2 Support Vector Machine (SVM)"
   }
 ]

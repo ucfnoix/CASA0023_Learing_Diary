@@ -22,9 +22,10 @@ knitr::include_graphics('images/sam-sae-gi.jpg')
 -   MSc., Urban Spatial Science, University College London, U.K.
 -   B.A., Urban and Regional Planning, Dankook University, Rep. of Korea
 
-## **What I am interested in...**
+I worked as a civil servant in the urban planning area for five years in Korea and also worked in real estate finance. I want to apply the knowledge I have learned in CASA to smart city initiatives and revitalise towns and agriculture in the countryside. (This is why I am taking this module for later 🙂)
 
--   Smart cities initiative
--   Revitalise towns and agriculture in the countryside (This is why I am taking this module for later:D)
+## **Special thanks to...**
+
+Dr Andrew Maclachlan, for teaching us this amazing RSCE module! Making my own learning diary every week is the happiest time for me ✏️
 
 Okay, let's wrap up my brief introduction here and look around my diary now ![](images/image-106880547.png){width="15"}
