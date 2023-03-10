@@ -5,7 +5,7 @@ Let's find out \~!
 
 ## 7.1 Summary
 
-### 7.1.1 What is GEE?
+### 7.1.1 What is ...
 
 ```{r echo=FALSE, out.width = "90%", fig.align='center', cache=TRUE, fig.cap= "Careser Glacier changes during the 1986–2020 period."}
 knitr::include_graphics('images/remotesensing-14-02377-g011.png')

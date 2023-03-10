@@ -136,6 +136,122 @@
             "title": "Automated Glacier Snow Line Altitude Calculation Method Using Landsat Series Images in the Google Earth Engine Platform",
             "type": "article-journal",
             "volume": "14"
+        },
+        {
+            "DOI": "10.3390/rs13040777",
+            "ISSN": "2072-4292",
+            "URL": "https://www.mdpi.com/2072-4292/13/4/777",
+            "abstract": "Land cover information is essential in European Union spatial management, particularly that of invasive species, natural habitats, urbanization, and deforestation; therefore, the need for accurate and objective data and tools is critical. For this purpose, the European Union’s flagship program, the Corine Land Cover (CLC), was created. Intensive works are currently being carried out to prepare a new version of CLC+ by 2024. The geographical, climatic, and economic diversity of the European Union raises the challenge to verify various test areas’ methods and algorithms. Based on the Corine program’s precise guidelines, Sentinel-2 and Landsat 8 satellite images were tested to assess classification accuracy and regional and spatial development in three varied areas of Catalonia, Poland, and Romania. The method is dependent on two machine learning algorithms, Random Forest (RF) and Support Vector Machine (SVM). The bias of classifications was reduced using an iterative of randomized training, test, and verification pixels. The ease of the implementation of the used algorithms makes reproducing the results possible and comparable. The results show that an SVM with a radial kernel is the best classifier, followed by RF. The high accuracy classes that can be updated and classes that should be redefined are specified. The methodology’s potential can be used by developers of CLC+ products as a guideline for algorithms, sensors, and the possibilities and difficulties of classifying different CLC classes.",
+            "author": [
+                {
+                    "family": "Dabija",
+                    "given": "Anca"
+                },
+                {
+                    "family": "Kluczek",
+                    "given": "Marcin"
+                },
+                {
+                    "family": "Zagajewski",
+                    "given": "Bogdan"
+                },
+                {
+                    "family": "Raczko",
+                    "given": "Edwin"
+                },
+                {
+                    "family": "Kycko",
+                    "given": "Marlena"
+                },
+                {
+                    "family": "Al-Sulttani",
+                    "given": "Ahmed H."
+                },
+                {
+                    "family": "Tardà",
+                    "given": "Anna"
+                },
+                {
+                    "family": "Pineda",
+                    "given": "Lydia"
+                },
+                {
+                    "family": "Corbera",
+                    "given": "Jordi"
+                }
+            ],
+            "container-title": "Remote Sensing",
+            "id": "rs13040777",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "Comparison of support vector machines and random forests for corine land cover mapping",
+            "type": "article-journal",
+            "volume": "13"
+        },
+        {
+            "DOI": "10.3390/rs13040777",
+            "URL": "https://www.mdpi.com/2072-4292/13/4/777",
+            "author": [
+                {
+                    "family": "Dabija",
+                    "given": "Anca"
+                },
+                {
+                    "family": "Kluczek",
+                    "given": "Marcin"
+                },
+                {
+                    "family": "Zagajewski",
+                    "given": "Bogdan"
+                },
+                {
+                    "family": "Raczko",
+                    "given": "Edwin"
+                },
+                {
+                    "family": "Kycko",
+                    "given": "Marlena"
+                },
+                {
+                    "family": "Al-Sulttani",
+                    "given": "Ahmed H."
+                },
+                {
+                    "family": "Tardà",
+                    "given": "Anna"
+                },
+                {
+                    "family": "Pineda",
+                    "given": "Lydia"
+                },
+                {
+                    "family": "Corbera",
+                    "given": "Jordi"
+                }
+            ],
+            "container-title": "Remote Sensing",
+            "id": "dabija2021",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        1
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 4 Publisher: Multidisciplinary Digital Publishing Institute",
+            "page": "777",
+            "title": "Comparison of Support Vector Machines and Random Forests for Corine Land Cover Mapping",
+            "type": "article-journal",
+            "volume": "13"
         }
     ],
     "project_biblios": [

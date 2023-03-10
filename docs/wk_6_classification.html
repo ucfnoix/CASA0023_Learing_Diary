@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -30,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./wk_7_classification_2.html" rel="next">
 <link href="./wk_5_GEE.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -130,6 +149,16 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./wk_7_classification_2.html" class="sidebar-item-text sidebar-link">7. Classification II</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./wk_8_temperature.html" class="sidebar-item-text sidebar-link">8. Temperature🌡️</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
   </div>
 </li>
@@ -181,7 +210,7 @@ Let’s find out how to analyse remotely sensed images, especially Land Use/Land
 <h2 class="anchored" data-anchor-id="summary">6.1 Summary</h2>
 <section id="how-do-we-know" class="level3">
 <h3 class="anchored" data-anchor-id="how-do-we-know">6.1.1 How do we know? 🤔</h3>
-<p>Follow your intuition! We can make judgments or conclusions about specific knowledge from our experience. It is called <strong>inductive learning</strong> and can be leveraged to analyze remote-sensing images.</p>
+<p>Your intuition! We can make judgments or conclusions about specific knowledge from our experience. It is called <strong>inductive learning</strong> and can be leveraged to analyze remote-sensing images.</p>
 </section>
 <section id="how-does-my-computer-know" class="level3">
 <h3 class="anchored" data-anchor-id="how-does-my-computer-know">6.1.2 How does my computer know? 🤖</h3>
@@ -317,49 +346,53 @@ Let’s find out how to analyse remotely sensed images, especially Land Use/Land
 <section id="support-vector-machine-svm" class="level4">
 <h4 class="anchored" data-anchor-id="support-vector-machine-svm">6.1.5.2 Support Vector Machine (SVM)</h4>
 <ul>
-<li><p>Used primarily for classification (pattern recognition) and regression analysis</p>
-<table class="table">
-<colgroup>
-<col style="width: 37%">
-<col style="width: 62%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Type</strong></td>
-<td><strong>Aim</strong></td>
-</tr>
-<tr class="even">
-<td>Existing classification methods</td>
-<td><strong>minimise</strong> error rate</td>
-</tr>
-<tr class="odd">
-<td>Support Vector Machine (SVM)</td>
-<td><strong>maximise</strong> the space between the two categories</td>
-</tr>
-</tbody>
-</table></li>
+<li>Used primarily for <strong>classification</strong> (pattern recognition) and <strong>regression analysis</strong></li>
+<li>SVM <strong>maximises</strong> the space between the two categories, compared to general classification methods <strong>minimise</strong> the error rate.</li>
 </ul>
-<div class="cell" data-layout-align="center" data-hash="wk_6_classification_cache/html/unnamed-chunk-4_b959bb94f487cf032cd10c1e4e66c648">
+<div class="cell" data-layout-align="center" data-hash="wk_6_classification_cache/html/unnamed-chunk-4_e811b9abd0ad42f93b8ea01acd72a552">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/20230305_210424.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<p></p><figcaption class="figure-caption">Source:<a href="https://towardsdatascience.com/support-vector-machine-simply-explained-fee28eba5496">Lilly Chen</a></figcaption><p></p>
+<p><img src="images/svm.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 </div>
 </div>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<ul>
+<li>Two types of SVM</li>
+</ul>
+<div class="cell" data-layout-align="center" data-hash="wk_6_classification_cache/html/unnamed-chunk-5_4f80deb36b02d5c3fa74d882c52ff0f5">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/svm_types.png" class="img-fluid figure-img" style="width:90.0%"></p>
+</figure>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip With #SVM Hashtag
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>#kernel trick #soft margin</p>
+<ul>
+<li><p>The Kernel trick</p>
+<ul>
+<li>Solve problems by converting them from <strong>low dimensions (2D)</strong> to <strong>high dimensions (3D)</strong></li>
+</ul>
+<div class="cell" data-layout-align="center" data-hash="wk_6_classification_cache/html/unnamed-chunk-6_cbbcad0a4d62cb6ac99271ecea1ed493">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/kerneltrick_1.png" class="img-fluid figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div></li>
+</ul>
+<div class="cell" data-layout-align="center" data-hash="wk_6_classification_cache/html/unnamed-chunk-7_16397848e6c9cf5f7372dbefde0840e2">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/kerneltrick_2.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<p></p><figcaption class="figure-caption">Source:<a href="https://www.eric-kim.net/eric-kim-net/posts/1/kernel_trick.html">Eric Kim</a></figcaption><p></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -367,9 +400,49 @@ Tip With #SVM Hashtag
 </section>
 <section id="application" class="level2">
 <h2 class="anchored" data-anchor-id="application">6.2 Application</h2>
+<p>According to <span class="citation" data-cites="dabija2021">(<a href="references.html#ref-dabija2021" role="doc-biblioref">Dabija et al. 2021</a>)</span>, European Union(EU) manages the land cover information using CORINE Land Cover(CLC).</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+What is CORINE Land Cover(CLC)?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The ‘Coordination of information on the environment’ (Corine) is an inventory of European land cover split into 44 different land cover classes. Source : <a href="https://www.eea.europa.eu/help/faq/what-is-corine-land-cover#:~:text=The%20'Coordination%20of%20information%20on,resolution%20on%20a%20cartographic%20map.">EEA</a></p>
+</div>
+</div>
 <ul>
-<li>An example of SVM?</li>
+<li><p>In 2021, two ML algorithms were tested when analysing remote sensing data in Catalonia, Poland, and Romania using images of Sentinel-2 and Landsat 8: <strong>Random Forest(RF)</strong> and <strong>Support Vector Machine (SVM)</strong></p></li>
+<li><p>The workflow of this work is as below.</p></li>
 </ul>
+<div class="cell" data-layout-align="center" data-hash="wk_6_classification_cache/html/unnamed-chunk-8_e5e1d7d58bac5d122baa0ec556498f81">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/workflow_clc.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<p></p><figcaption class="figure-caption">Source:<a href="file:///C:/Users/eycho/Downloads/remotesensing-13-00777-v3.pdf">Dabija et al.</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><p>As a result, the Support vector machine algorithms using radial kernel functions (SVM RBF) have obtained significant results in all research areas.</p></li>
+<li><p>Also, overall, changes in vegetation by region (e.g.&nbsp;noticeable changes in vineyards and fruit trees share in the area of Catalonia) and tree species could be found, and they were well classified by each category.</p></li>
+<li><p><strong>SVM RBF was the best classifier</strong>, followed by RF in this research.</p></li>
+</ul>
+<div class="cell" data-layout-align="center" data-hash="wk_6_classification_cache/html/unnamed-chunk-9_871a373c9cf00210670416ac68461034">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/20230310_141108.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<p></p><figcaption class="figure-caption">MSource:<a href="file:///C:/Users/eycho/Downloads/remotesensing-13-00777-v3.pdf">Dabija et al.</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">6.3 Reflection</h2>
@@ -380,6 +453,11 @@ Tip With #SVM Hashtag
 </ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-dabija2021" class="csl-entry" role="doc-biblioentry">
+Dabija, Anca, Marcin Kluczek, Bogdan Zagajewski, Edwin Raczko, Marlena Kycko, Ahmed H. Al-Sulttani, Anna Tardà, Lydia Pineda, and Jordi Corbera. 2021. <span>“Comparison of Support Vector Machines and Random Forests for Corine Land Cover Mapping.”</span> <em>Remote Sensing</em> 13 (4): 777. <a href="https://doi.org/10.3390/rs13040777">https://doi.org/10.3390/rs13040777</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -523,8 +601,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./wk_7_classification_2.html" class="pagination-link">
+        <span class="nav-page-text">7. Classification II</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
