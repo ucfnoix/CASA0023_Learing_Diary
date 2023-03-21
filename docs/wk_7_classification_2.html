@@ -154,7 +154,11 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">7.1 Summary</a>
   <ul class="collapse">
-  <li><a href="#what-is" id="toc-what-is" class="nav-link" data-scroll-target="#what-is">7.1.1 What is …</a></li>
+  <li><a href="#pre-classified-data" id="toc-pre-classified-data" class="nav-link" data-scroll-target="#pre-classified-data">7.1.1 Pre-classified data</a></li>
+  <li><a href="#object-based-image-analysis-obia" id="toc-object-based-image-analysis-obia" class="nav-link" data-scroll-target="#object-based-image-analysis-obia">7.1.2 Object-based image analysis (OBIA)</a></li>
+  <li><a href="#sub-pixel-analysis" id="toc-sub-pixel-analysis" class="nav-link" data-scroll-target="#sub-pixel-analysis">7.1.3 Sub-pixel analysis</a></li>
+  <li><a href="#accuracy" id="toc-accuracy" class="nav-link" data-scroll-target="#accuracy">7.1.4 Accuracy</a></li>
+  <li><a href="#how-to-improve-the-accuracy-of-our-data" id="toc-how-to-improve-the-accuracy-of-our-data" class="nav-link" data-scroll-target="#how-to-improve-the-accuracy-of-our-data">7.1.5 How to improve the accuracy of our data?</a></li>
   </ul></li>
   <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">7.2 Application</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">7.3 Reflection</a></li>
@@ -182,28 +186,215 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>This is a learning diary for week 7.<br>
-Let’s find out ~!</p>
+We learned about various classification methods last week. But we can also use pre-classified data or other methods for improved accuracy!</p>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">7.1 Summary</h2>
-<section id="what-is" class="level3">
-<h3 class="anchored" data-anchor-id="what-is">7.1.1 What is …</h3>
-<div class="cell" data-layout-align="center" data-hash="wk_7_classification_2_cache/html/unnamed-chunk-1_addde1bfe055eedaf6b135b6bfadbe23">
+<section id="pre-classified-data" class="level3">
+<h3 class="anchored" data-anchor-id="pre-classified-data">7.1.1 Pre-classified data</h3>
+<p>The representative pre-classified data is <a href="https://www.dynamicworld.app/explore/">Dynamic World.</a> But we need to consider a few things before we use it, such as which data was used, its scale/grid, data training ML method etc.</p>
+</section>
+<section id="object-based-image-analysis-obia" class="level3">
+<h3 class="anchored" data-anchor-id="object-based-image-analysis-obia">7.1.2 Object-based image analysis (OBIA)</h3>
+<ul>
+<li><em>“The solution is an object, not pixels!”</em></li>
+<li>OBIA consists of two parts: Segmentation and Classification.</li>
+</ul>
+<div class="cell" data-layout-align="center" data-out.wdth="90%" data-hash="wk_7_classification_2_cache/html/unnamed-chunk-1_bcc8ec20f4ef51d993930395b4812f82">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/remotesensing-14-02377-g011.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<p></p><figcaption class="figure-caption">Careser Glacier changes during the 1986–2020 period.</figcaption><p></p>
+<p><img src="images/OBIA-classification1-1-850x370.png" class="img-fluid figure-img" width="425"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://gisgeography.com/obia-object-based-image-analysis-geobia/">GISGeography</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="segmentation" class="level4">
+<h4 class="anchored" data-anchor-id="segmentation">7.1.2.1 Segmentation</h4>
+<ul>
+<li>Unlike a traditional pixel-based image classification, OBIA segments an image grouping small pixels together into vector objects based on similarity (homogeneity).</li>
+</ul>
+</section>
+<section id="classification" class="level4">
+<h4 class="anchored" data-anchor-id="classification">7.1.2.2 Classification</h4>
+<ul>
+<li><p>There is no rule to classify land cover features but some statistics according to <a href="https://gisgeography.com/obia-object-based-image-analysis-geobia/">GISGeography</a></p>
+<table class="table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 93%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Types</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Water</td>
+<td>flat (low nDSM), it accumulates into depressions (high TWI or low TPI), it has a low temperature (thermal infrared – TIRS) and it has high near-infrared absorption (negative NDVI)</td>
+</tr>
+<tr class="even">
+<td>Trees</td>
+<td>varying heights (high nDSM standard deviation) and have high near-infrared reflectance (high NDVI)</td>
+</tr>
+<tr class="odd">
+<td>Buildings</td>
+<td>often rectangle (high rectangular fit), are tall (high nDSM), and have high slopes</td>
+</tr>
+<tr class="even">
+<td>Grass</td>
+<td>short (low nDSM), it’s flat (low nDSM standard deviation), and has moderate near-infrared reflectance (moderate NDVI)</td>
+</tr>
+<tr class="odd">
+<td>Roads</td>
+<td>reflect a lot of light (high RGB), they are flat (low nDSM), have a high light intensity, and it has a low or negative NDVI</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</section>
+</section>
+<section id="sub-pixel-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="sub-pixel-analysis">7.1.3 Sub-pixel analysis</h3>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Sub pixel analysis is also called as
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Spectral Mixture Analysis (SMA) or Linear spectral unmixing</p>
+</div>
+</div>
+<p>What if we have <strong>a pixel with a range of land cover types</strong>? How can we classify it?</p>
+<div class="cell" data-layout-align="center" data-out.wdth="90%" data-hash="wk_7_classification_2_cache/html/unnamed-chunk-2_d057a9649516314f6a5a9d5b5643f0f6">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/SPA.png" class="img-fluid figure-img" width="478"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
+<section id="accuracy" class="level3">
+<h3 class="anchored" data-anchor-id="accuracy">7.1.4 Accuracy</h3>
+<section id="why-does-accuracy-important" class="level4">
+<h4 class="anchored" data-anchor-id="why-does-accuracy-important">7.1.4.1 Why does accuracy important?</h4>
+<ul>
+<li>It determines the quality of the information derived from remotely sensed data.</li>
+<li>Remote sensed data are often used for mapping and developing environmental models that are used for management and decision making purposes. / Source: <a href="https://gsp.humboldt.edu/olm_2019/courses/GSP_216_Online/lesson6-2/index.html#:~:text=Accuracy%20is%20important%20because%20remote,management%20and%20decision%20making%20purposes.">GSP216</a></li>
+<li>Therefore, the validity of classification results must be verified.</li>
+</ul>
+</section>
+<section id="error-matrix" class="level4">
+<h4 class="anchored" data-anchor-id="error-matrix">7.1.4.2 Error Matrix</h4>
+<table class="table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 81%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Types</th>
+<th>Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Total / Overall Accuracy</td>
+<td><ul>
+<li><p>Is the map consistent with the predetermined classification accuracy criteria?</p></li>
+<li><p>Assessment of consistency between classified data and reference data for the entire region in each class</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td>Producer accuracy</td>
+<td><ul>
+<li><p>Accuracy evaluated from the analyst’s point of view based on the class of reference data (Problem with recall)</p></li>
+<li><p>How well did the producer make the data / classification</p></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td>User accuracy</td>
+<td><ul>
+<li><p>Evaluate based on the class of classification results</p></li>
+<li><p>Provide reliability criteria for classification results (Precision)</p></li>
+<li><p>How well can the user use the data / classification</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="kappa-coefficient" class="level4">
+<h4 class="anchored" data-anchor-id="kappa-coefficient">7.1.4.3 Kappa Coefficient</h4>
+<ul>
+<li><p>Probability to gain the reliability of two observers (or evaluators)</p></li>
+<li><p>To measure the consistency of measurement category values between evaluators.</p></li>
+<li><p>It’s ineffective -&gt; it’s actually meaningless accuracy</p></li>
+</ul>
+</section>
+</section>
+<section id="how-to-improve-the-accuracy-of-our-data" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-improve-the-accuracy-of-our-data">7.1.5 How to improve the accuracy of our data?</h3>
+<section id="cross-validationcv" class="level4">
+<h4 class="anchored" data-anchor-id="cross-validationcv">7.1.5.1 Cross Validation(CV)</h4>
+<div class="cell" data-layout-align="center" data-out.wdth="90%" data-hash="wk_7_classification_2_cache/html/unnamed-chunk-3_7485e7c423ccf39058629dda0bc10cbb">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/k-fold.png" class="img-fluid figure-img" width="319"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://scikit-learn.org/stable/modules/cross_validation.html">scikitlearn</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><p>Evaluate performance by dividing data over and over again and learning multiple models.</p></li>
+<li><p>Calculate the average performance of multiple sets of training/testing data -&gt; increased accuracy.</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 49%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Advantage ⭕</strong></td>
+<td><strong>Disadvantage ❌</strong></td>
+</tr>
+<tr class="even">
+<td>All datasets can be utilised for training. (Preventing underfitting due to lack of data)</td>
+<td>Due to the high number of iterations, it takes a long time to train/evaluate the model.</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</section>
+<section id="spatial-cross-validation" class="level4">
+<h4 class="anchored" data-anchor-id="spatial-cross-validation">7.1.5.2 Spatial Cross Validation</h4>
+<p>If Spatial cross-validation is not done, the model would have better accuracy that it actually does.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/TK_2MIbChb0" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+</section>
 </section>
 <section id="application" class="level2">
 <h2 class="anchored" data-anchor-id="application">7.2 Application</h2>
+<ul>
+<li><p>any method to implement accuracy</p></li>
+<li></li>
+</ul>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">7.3 Reflection</h2>
+<ul>
+<li>It is similar to spatial auto-correction analysis from the GIS module / easy to understand</li>
+<li>ML</li>
+</ul>
 
 
 </section>

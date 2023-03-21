@@ -1,16 +1,126 @@
 # 7. Classification II {.unnumbered}
 
 This is a learning diary for week 7.\
-Let's find out \~!
+We learned about various classification methods last week. But we can also use pre-classified data or other methods for improved accuracy!
 
 ## 7.1 Summary
 
-### 7.1.1 What is ...
+### 7.1.1 Pre-classified data
 
-```{r echo=FALSE, out.width = "90%", fig.align='center', cache=TRUE, fig.cap= "Careser Glacier changes during the 1986–2020 period."}
-knitr::include_graphics('images/remotesensing-14-02377-g011.png')
+The representative pre-classified data is [Dynamic World.](https://www.dynamicworld.app/explore/) But we need to consider a few things before we use it, such as which data was used, its scale/grid, data training ML method etc.
+
+### 7.1.2 Object-based image analysis (OBIA)
+
+-   *"The solution is an object, not pixels!"*
+-   OBIA consists of two parts: Segmentation and Classification.
+
+```{r echo=FALSE, out.wdth = "90%", fig.align='center', cache=TRUE, fig.cap= "Source: [GISGeography](https://gisgeography.com/obia-object-based-image-analysis-geobia/)"}
+knitr::include_graphics('images/OBIA-classification1-1-850x370.png')
 ```
+
+#### 7.1.2.1 Segmentation
+
+-   Unlike a traditional pixel-based image classification, OBIA segments an image grouping small pixels together into vector objects based on similarity (homogeneity).
+
+#### 7.1.2.2 Classification
+
+-   There is no rule to classify land cover features but some statistics according to [GISGeography](https://gisgeography.com/obia-object-based-image-analysis-geobia/)
+
+    +-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Types     | Method                                                                                                                                                                               |
+    +===========+======================================================================================================================================================================================+
+    | Water     | flat (low nDSM), it accumulates into depressions (high TWI or low TPI), it has a low temperature (thermal infrared -- TIRS) and it has high near-infrared absorption (negative NDVI) |
+    +-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Trees     | varying heights (high nDSM standard deviation) and have high near-infrared reflectance (high NDVI)                                                                                   |
+    +-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Buildings | often rectangle (high rectangular fit), are tall (high nDSM), and have high slopes                                                                                                   |
+    +-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Grass     | short (low nDSM), it's flat (low nDSM standard deviation), and has moderate near-infrared reflectance (moderate NDVI)                                                                |
+    +-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Roads     | reflect a lot of light (high RGB), they are flat (low nDSM), have a high light intensity, and it has a low or negative NDVI                                                          |
+    +-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+### 7.1.3 Sub-pixel analysis
+
+::: callout-note
+## Sub pixel analysis is also called as
+
+Spectral Mixture Analysis (SMA) or Linear spectral unmixing
+:::
+
+What if we have **a pixel with a range of land cover types**? How can we classify it?
+
+```{r echo=FALSE, out.wdth = "90%", fig.align='center', cache=TRUE}
+knitr::include_graphics('images/SPA.png')
+```
+
+### 7.1.4 Accuracy
+
+#### 7.1.4.1 Why does accuracy important?
+
+-   It determines the quality of the information derived from remotely sensed data.
+-   Remote sensed data are often used for mapping and developing environmental models that are used for management and decision making purposes. / Source: [GSP216](https://gsp.humboldt.edu/olm_2019/courses/GSP_216_Online/lesson6-2/index.html#:~:text=Accuracy%20is%20important%20because%20remote,management%20and%20decision%20making%20purposes.)
+-   Therefore, the validity of classification results must be verified.
+
+#### 7.1.4.2 Error Matrix
+
++--------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Types                    | Feature                                                                                                            |
++==========================+====================================================================================================================+
+| Total / Overall Accuracy | -   Is the map consistent with the predetermined classification accuracy criteria?                                 |
+|                          |                                                                                                                    |
+|                          | -   Assessment of consistency between classified data and reference data for the entire region in each class       |
++--------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Producer accuracy        | -   Accuracy evaluated from the analyst's point of view based on the class of reference data (Problem with recall) |
+|                          |                                                                                                                    |
+|                          | -   How well did the producer make the data / classification                                                       |
++--------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User accuracy            | -   Evaluate based on the class of classification results                                                          |
+|                          |                                                                                                                    |
+|                          | -   Provide reliability criteria for classification results (Precision)                                            |
+|                          |                                                                                                                    |
+|                          | -   How well can the user use the data / classification                                                            |
++--------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+#### 7.1.4.3 Kappa Coefficient
+
+-   Probability to gain the reliability of two observers (or evaluators)
+
+-   To measure the consistency of measurement category values between evaluators.
+
+-   It's ineffective -\> it's actually meaningless accuracy
+
+### 7.1.5 How to improve the accuracy of our data?
+
+#### 7.1.5.1 Cross Validation(CV)
+
+```{r echo=FALSE, out.wdth = "90%", fig.align='center', cache=TRUE, fig.cap="Source: [scikitlearn](https://scikit-learn.org/stable/modules/cross_validation.html)"}
+knitr::include_graphics('images/k-fold.png')
+```
+
+-   Evaluate performance by dividing data over and over again and learning multiple models.
+
+-   Calculate the average performance of multiple sets of training/testing data -\> increased accuracy.
+
+    +------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+    | **Advantage ⭕**                                                                         | **Disadvantage ❌**                                                                     |
+    +------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+    | All datasets can be utilised for training. (Preventing underfitting due to lack of data) | Due to the high number of iterations, it takes a long time to train/evaluate the model. |
+    +------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+
+#### 7.1.5.2 Spatial Cross Validation
+
+If Spatial cross-validation is not done, the model would have better accuracy that it actually does.
+
+{{< video https://youtu.be/TK_2MIbChb0 >}}
 
 ## 7.2 Application
 
+-   any method to implement accuracy
+
+-   
+
 ## 7.3 Reflection
+
+-   It is similar to spatial auto-correction analysis from the GIS module / easy to understand
+-   ML
