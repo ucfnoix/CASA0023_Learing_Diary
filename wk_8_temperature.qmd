@@ -26,15 +26,15 @@ knitr::include_graphics('images/Alexandre-Affonso-800x512.jpg')
 
 ### 8.1.2 What data do we need?
 
-- EO data 
-  - MODIS
-  - Landsat 8 TIRS Collection 2
-- Meteorological data
-  - Temperature (historical/past, real-time)
-  - Precipitation
-  - Wind 
-- Spatial data(Administrative boundary data) from OpenStreetMap
-- Census data
+-   EO data
+    -   MODIS
+    -   Landsat 8 TIRS Collection 2
+-   Meteorological data
+    -   Temperature (historical/past, real-time)
+    -   Precipitation
+    -   Wind
+-   Spatial data(Administrative boundary data) from OpenStreetMap
+-   Census data
 
 ::: callout-warning
 ## Think one more time☝️️

@@ -116,11 +116,10 @@ If Spatial cross-validation is not done, the model would have better accuracy th
 
 ## 7.2 Application
 
--   any method to implement accuracy
+@pradhan2010 used remote sensing data (SPOT 5, Landsat TM) and GIS for landslide hazard analysis in the Penang, Cameron and Selangor areas in Malaysia. Ten factors were computed for the logistic regression coefficient: slope, distance from drainage, soil type, land cover, etc. And then, the multivariate logistic regression model was applied and cross-validated for the three study areas. As a result, \~ as below.
 
--   
+(Fig 3. )
 
 ## 7.3 Reflection
 
--   It is similar to spatial auto-correction analysis from the GIS module / easy to understand
 -   ML

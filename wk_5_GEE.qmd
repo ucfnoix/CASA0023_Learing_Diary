@@ -19,7 +19,7 @@ Let's find out what GEE is and how to use it with various functions!
 ### 5.1.2 Image components in GEE
 
 |                      |                                                     |
-|------------------------|------------------------------------------------|
+|----------------------|-----------------------------------------------------|
 | **Raster**           | an image                                            |
 | **Image Collection** | several images or polygons = a stack of raster data |
 

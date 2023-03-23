@@ -64,12 +64,12 @@ knitr::include_graphics('images/how-random-forest-classifier-work.png')
 
 ### 6.1.5 Three types of Image Classification
 
-| Supervised Classification                             | Unsupervised Classification                              | Object-Based Image Analysis |
-|-----------------------|------------------------|--------------------------|
-| Pattern recognition or machine learning               | clustering                                               | TBC in week 7               |
-| Parametric (normal distribution) : Maximum likelihood | k-means                                                  |                             |
-| non parametric (not normal) : Support Vector Machine  | ISODATA                                                  |                             |
-|                                                       | cluster busting = masking (removing unsuitable clusters) |                             |
+| Supervised Classification                             | Unsupervised Classification                              | Object-Based Image Analysis                                                                                                        |
+|---------------------------|----------------------------|-----------------|
+| Pattern recognition or machine learning               | clustering                                               | [Week 7_7.1.2 OBIA](https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#object-based-image-analysis-obia) |
+| Parametric (normal distribution) : Maximum likelihood | k-means                                                  |                                                                                                                                    |
+| non parametric (not normal) : Support Vector Machine  | ISODATA                                                  |                                                                                                                                    |
+|                                                       | cluster busting = masking (removing unsuitable clusters) |                                                                                                                                    |
 
 #### 6.1.5.1 Maximum Likelihood Eastimation (MLE)
 
@@ -106,26 +106,27 @@ knitr::include_graphics('images/kerneltrick_2.png')
 
 ## 6.2 Application
 
-According to [@dabija2021], European Union(EU) manages the land cover information using CORINE Land Cover(CLC). 
+According to [@dabija2021], European Union(EU) manages the land cover information using CORINE Land Cover(CLC).
 
 ::: callout-note
-## What is CORINE Land Cover(CLC)? 
-The 'Coordination of information on the environment' (Corine) is an inventory of European land cover split into 44 different land cover classes. 
-Source : [EEA](https://www.eea.europa.eu/help/faq/what-is-corine-land-cover#:~:text=The%20'Coordination%20of%20information%20on,resolution%20on%20a%20cartographic%20map.)
+## What is CORINE Land Cover(CLC)?
+
+The 'Coordination of information on the environment' (Corine) is an inventory of European land cover split into 44 different land cover classes. Source : [EEA](https://www.eea.europa.eu/help/faq/what-is-corine-land-cover#:~:text=The%20'Coordination%20of%20information%20on,resolution%20on%20a%20cartographic%20map.)
 :::
 
-- In 2021, two ML algorithms were tested when analysing remote sensing data in Catalonia, Poland, and Romania using images of Sentinel-2 and Landsat 8: **Random Forest(RF)** and **Support Vector Machine (SVM)**
+-   In 2021, two ML algorithms were tested when analysing remote sensing data in Catalonia, Poland, and Romania using images of Sentinel-2 and Landsat 8: **Random Forest(RF)** and **Support Vector Machine (SVM)**
 
-- The workflow of this work is as below.
+-   The workflow of this work is as below.
+
 ```{r echo=FALSE, out.width = "90%", fig.align='center', cache=TRUE, fig.cap="Source:[Dabija et al.](file:///C:/Users/eycho/Downloads/remotesensing-13-00777-v3.pdf)"}
 knitr::include_graphics('images/workflow_clc.png')
 ```
 
-- As a result, the Support vector machine algorithms using radial kernel functions (SVM RBF) have obtained significant results in all research areas. 
+-   As a result, the Support vector machine algorithms using radial kernel functions (SVM RBF) have obtained significant results in all research areas.
 
-- Also, overall, changes in vegetation by region (e.g. noticeable changes in vineyards and fruit trees share in the area of Catalonia) and tree species could be found, and they were well classified by each category.
+-   Also, overall, changes in vegetation by region (e.g. noticeable changes in vineyards and fruit trees share in the area of Catalonia) and tree species could be found, and they were well classified by each category.
 
-- **SVM RBF was the best classifier**, followed by RF in this research.
+-   **SVM RBF was the best classifier**, followed by RF in this research.
 
 ```{r echo=FALSE, out.width = "90%", fig.align='center', cache=TRUE, fig.cap="MSource:[Dabija et al.](file:///C:/Users/eycho/Downloads/remotesensing-13-00777-v3.pdf)"}
 knitr::include_graphics('images/20230310_141108.png')

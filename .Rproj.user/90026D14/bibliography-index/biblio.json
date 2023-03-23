@@ -252,6 +252,83 @@
             "title": "Comparison of Support Vector Machines and Random Forests for Corine Land Cover Mapping",
             "type": "article-journal",
             "volume": "13"
+        },
+        {
+            "URL": "https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#object-based-image-analysis-obia",
+            "id": "eunyoung",
+            "title": "Eunyoung’s learning diary - 7. Classification II",
+            "type": ""
+        },
+        {
+            "URL": "https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#object-based-image-analysis-obia",
+            "id": "OBSA",
+            "title": "Eunyoung’s learning diary - 7. Classification II",
+            "type": ""
+        },
+        {
+            "URL": "https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#object-based-image-analysis-obia",
+            "id": "eunyounga",
+            "title": "Eunyoung’s learning diary - 7. Classification II",
+            "type": ""
+        },
+        {
+            "URL": "https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#object-based-image-analysis-obia",
+            "id": "eunyoungb",
+            "title": "Eunyoung’s learning diary - 7. Classification II",
+            "type": ""
+        },
+        {
+            "DOI": "10.1016/j.rse.2019.111630",
+            "URL": "https://www.sciencedirect.com/science/article/pii/S0034425719306509",
+            "author": [
+                {
+                    "family": "Foody",
+                    "given": "Giles M."
+                }
+            ],
+            "container-title": "Remote Sensing of Environment",
+            "id": "foody2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        3,
+                        15
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "111630",
+            "title": "Explaining the unsuitability of the kappa coefficient in the assessment and comparison of the accuracy of thematic maps obtained by image classification",
+            "type": "article-journal",
+            "volume": "239"
+        },
+        {
+            "DOI": "10.1016/j.asr.2010.01.006",
+            "URL": "https://www.sciencedirect.com/science/article/pii/S0273117710000268",
+            "author": [
+                {
+                    "family": "Pradhan",
+                    "given": "Biswajeet"
+                }
+            ],
+            "container-title": "Advances in Space Research",
+            "id": "pradhan2010",
+            "issue": "10",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010,
+                        5,
+                        17
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "1244-1256",
+            "title": "Remote sensing and GIS-based landslide hazard analysis and cross-validation using multivariate logistic regression model on three test areas in Malaysia",
+            "type": "article-journal",
+            "volume": "45"
         }
     ],
     "project_biblios": [

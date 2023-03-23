@@ -36,7 +36,7 @@ knitr::include_graphics('images/Resampling-methods-a-nearest-neighbor-b-bilinear
 #### 3.1.2.2 Atmospheric correction
 
 |                                  |                                                                                                                        |
-|------------------|------------------------------------------------------|
+|----------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | **Types**                        | **Details**                                                                                                            |
 | Dark object subtraction(DOS)     | Find the brightest value based on the darkest value (assuming distortion was caused by air because air reflects light) |
 | Psuedo-invariant Features (PIFs) | Adjust the brightness pixels using regression                                                                          |
@@ -59,7 +59,7 @@ knitr::include_graphics('images/tgh.png')
 -   Compare DN with spectral radiance = Radiometric calibration
 
 ::: callout-note
-## [Remote Sensing Jargon] 1. Energy
+## \[Remote Sensing Jargon\] 1. Energy
 
 When the sun's radiant energy 🌞 passes through the Earth's atmosphere ☷ and touches the surface of an object 🪨,
 
@@ -72,7 +72,7 @@ When the sun's radiant energy 🌞 passes through the Earth's atmosphere ☷ and
 :::
 
 ::: callout-note
-## [Remote Sensing Jargon] 2. Influencing factors
+## \[Remote Sensing Jargon\] 2. Influencing factors
 
 Along the way from the SUN 🌞 to the sensor 🛰,
 

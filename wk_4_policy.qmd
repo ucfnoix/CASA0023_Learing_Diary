@@ -75,7 +75,7 @@ knitr::include_graphics('images/drawing.png')
 -   A Future Plan
 
     | Year     | Plan                                                                                                                                     |
-    |----------------|--------------------------------------------------------|
+    |----------|------------------------------------------------------------------------------------------------------------------------------------------|
     | **2023** | **Revision and enactment of ordinances and guidelines to establish an organisation and fund for a total environmental resources system** |
     | 2024     | Pilot operation of the total environmental resources system                                                                              |
     | 2025     | Operation of the total environmental resources system in earnest                                                                         |
@@ -87,7 +87,7 @@ knitr::include_graphics('images/drawing.png')
 -   Among them, Jeju Island is a UNESCO-certified nature conservation area. [World Natural Heritage Jeju](https://www.jeju.go.kr/jejuwnh/unesco/triple.htm#english)
 
 | 2002                | 2007                          | 2010                    |
-|--------------------|----------------------------|------------------------|
+|---------------------|-------------------------------|-------------------------|
 | a biosphere reserve | a World Natural Heritage site | a UNESCO Global Geopark |
 
 -   I have worked as a civil servant in Korea, and aerial photographs could not be used as legal proof when cracking down on illegal activities but were only a reference until a few years ago. However, the use of aerial photographs began to be legislated as the importance of using spatial information emerged.
