@@ -730,6 +730,41 @@
             "language": "en",
             "title": "Climate analysis map for the Stuttgart region, also showing so-called ventilation paths along with other climate related features  European Environment Agency",
             "type": ""
+        },
+        {
+            "DOI": "10.3390/rs14102377",
+            "URL": "https://www.mdpi.com/2072-4292/14/10/2377",
+            "author": [
+                {
+                    "family": "Li",
+                    "given": "Xiang"
+                },
+                {
+                    "family": "Wang",
+                    "given": "Ninglian"
+                },
+                {
+                    "family": "Wu",
+                    "given": "Yuwei"
+                }
+            ],
+            "container-title": "Remote Sensing",
+            "id": "li2022a",
+            "issue": "10",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        1
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 10 Publisher: Multidisciplinary Digital Publishing Institute",
+            "page": "2377",
+            "title": "Automated Glacier Snow Line Altitude Calculation Method Using Landsat Series Images in the Google Earth Engine Platform",
+            "type": "article-journal",
+            "volume": "14"
         }
     ],
     "project_biblios": [
