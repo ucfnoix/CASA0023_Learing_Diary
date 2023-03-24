@@ -65,7 +65,7 @@ knitr::include_graphics('images/how-random-forest-classifier-work.png')
 ### 6.1.5 Three types of Image Classification
 
 | Supervised Classification                             | Unsupervised Classification                              | Object-Based Image Analysis                                                                                                        |
-|---------------------------|----------------------------|-----------------|
+|---------------------------|----------------------------|------------------|
 | Pattern recognition or machine learning               | clustering                                               | [Week 7_7.1.2 OBIA](https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#object-based-image-analysis-obia) |
 | Parametric (normal distribution) : Maximum likelihood | k-means                                                  |                                                                                                                                    |
 | non parametric (not normal) : Support Vector Machine  | ISODATA                                                  |                                                                                                                                    |
@@ -128,7 +128,7 @@ knitr::include_graphics('images/workflow_clc.png')
 
 -   **SVM RBF was the best classifier**, followed by RF in this research.
 
-```{r echo=FALSE, out.width = "90%", fig.align='center', cache=TRUE, fig.cap="MSource:[Dabija et al.](file:///C:/Users/eycho/Downloads/remotesensing-13-00777-v3.pdf)"}
+```{r echo=FALSE, out.width = "90%", fig.align='center', cache=TRUE, fig.cap="Source:[Dabija et al.](file:///C:/Users/eycho/Downloads/remotesensing-13-00777-v3.pdf)"}
 knitr::include_graphics('images/20230310_141108.png')
 ```
 

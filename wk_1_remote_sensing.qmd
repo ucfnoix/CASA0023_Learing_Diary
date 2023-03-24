@@ -16,7 +16,7 @@ Let's get started with remote sensing to explore our world 🌏
 
 -   **An electromagnetic wave** has two components, *an electric field*(moving up and down) and *a magnetic field*(moving left and right).
 
-    -   The two types of sensors with electromagnetic waves.
+    -   The two types of sensors with electromagnetic waves. [@gisgeography2015]
 
     +:-----------:+:--------------------------------------:+:-----------------------------------------------------:+:-------------------:+
     | **Types**   | **How to work**                        | **Emission**                                          | **Examples**        |
@@ -63,7 +63,7 @@ knitr::include_graphics('images/sky4.en.png')
 
 -   A phenomenon in which light with straightness is scattered in all directions by rough surfaces or tiny particles.
 
--   It makes **distance measurement difficult** (e.g. atmosphere, clouds) → we need *alternative methods* to gauge distance
+-   It makes **distance measurement difficult** (e.g. atmosphere, clouds) → we need *alternative methods* to gauge distance [Source: @remotely]
 
     -   Synthetic aperture radar (SAR): Polarization, Fluoresence
 

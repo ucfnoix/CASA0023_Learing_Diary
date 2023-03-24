@@ -1,202 +1,47 @@
 {
     "sources": [
         {
-            "DOI": "10.1093/comjnl/27.2.97",
-            "ISSN": "0010-4620",
-            "URL": "https://doi.org/10.1093/comjnl/27.2.97",
-            "author": [
-                {
-                    "family": "Knuth",
-                    "given": "Donald E."
-                }
-            ],
-            "container-title": "Comput. J.",
-            "id": "knuth84",
-            "issue": "2",
-            "issued": {
+            "URL": "https://oppla.eu/casestudy/21264",
+            "abstract": "Municipality of Stuttgart Office for Environmental Protection, Department of Urban Climatology Gaisburgstraße 4, 70182 Stuttgart, Germany Verband Region Stuttgart – Körperschaft des öffentlichen Rechts Kronenstraße 25 70174 Stuttgart",
+            "accessed": {
                 "date-parts": [
                     [
-                        1984,
-                        5
+                        2023,
+                        3,
+                        10
                     ]
                 ]
             },
-            "page": "97-111",
-            "publisher": "Oxford University Press, Inc.",
-            "publisher-place": "USA",
-            "title": "Literate programming",
-            "type": "article-journal",
-            "volume": "27"
-        },
-        {
-            "URL": "https://earthengine.google.com/faq/",
-            "id": "faq-go",
-            "title": "FAQ  google earth engine",
-            "type": ""
-        },
-        {
-            "DOI": "10.3390/rs14102377",
-            "ISSN": "2072-4292",
-            "URL": "https://www.mdpi.com/2072-4292/14/10/2377",
-            "abstract": "Glacier snow line altitude (SLA) at the end of the ablation season is an indicator of the equilibrium line altitude (ELA), which is a key parameter for calculating and assessing glacier mass balance. Here, we present an automated algorithm to classify bare ice and snow cover on glaciers using Landsat series images and calculate the minimum annual glacier snow cover ratio (SCR) and maximum SLA for reference glaciers during the 1985&ndash;2020 period in Google Earth Engine. The calculated SCR and SLA values are verified using the observed glacier accumulation area ratio (AAR) and ELA. We select 14 reference glaciers from High Mountain Asia (HMA), the Caucasus, the Alps, and Western Canada, which represent four mountainous regions with extensive glacial development in the northern hemisphere. The SLA accuracy is  73",
-            "author": [
-                {
-                    "family": "Li",
-                    "given": "Xiang"
-                },
-                {
-                    "family": "Wang",
-                    "given": "Ninglian"
-                },
-                {
-                    "family": "Wu",
-                    "given": "Yuwei"
-                }
-            ],
-            "container-title": "Remote Sensing",
-            "id": "rs14102377",
-            "issue": "10",
+            "id": "2020c",
             "issued": {
                 "date-parts": [
                     [
-                        2022
+                        2020,
+                        12,
+                        15
                     ]
                 ]
             },
-            "title": "Automated glacier snow line altitude calculation method using landsat series images in the google earth engine platform",
-            "type": "article-journal",
-            "volume": "14"
-        },
-        {
-            "DOI": "10.3390/rs14102377",
-            "URL": "https://www.mdpi.com/2072-4292/14/10/2377",
-            "author": [
-                {
-                    "family": "Li",
-                    "given": "Xiang"
-                },
-                {
-                    "family": "Wang",
-                    "given": "Ninglian"
-                },
-                {
-                    "family": "Wu",
-                    "given": "Yuwei"
-                }
-            ],
-            "container-title": "Remote Sensing",
-            "id": "li2022",
-            "issue": "10",
-            "issued": {
-                "date-parts": [
-                    [
-                        2022,
-                        1
-                    ]
-                ]
-            },
-            "language": "en",
-            "note": "Number: 10 Publisher: Multidisciplinary Digital Publishing Institute",
-            "page": "2377",
-            "title": "Automated Glacier Snow Line Altitude Calculation Method Using Landsat Series Images in the Google Earth Engine Platform",
-            "type": "article-journal",
-            "volume": "14"
-        },
-        {
-            "DOI": "10.3390/rs14102377",
-            "URL": "https://www.mdpi.com/2072-4292/14/10/2377",
-            "author": [
-                {
-                    "family": "Li",
-                    "given": "Xiang"
-                },
-                {
-                    "family": "Wang",
-                    "given": "Ninglian"
-                },
-                {
-                    "family": "Wu",
-                    "given": "Yuwei"
-                }
-            ],
-            "container-title": "Remote Sensing",
-            "id": "li2022a",
-            "issue": "10",
-            "issued": {
-                "date-parts": [
-                    [
-                        2022,
-                        1
-                    ]
-                ]
-            },
-            "language": "en",
-            "note": "Number: 10 Publisher: Multidisciplinary Digital Publishing Institute",
-            "page": "2377",
-            "title": "Automated Glacier Snow Line Altitude Calculation Method Using Landsat Series Images in the Google Earth Engine Platform",
-            "type": "article-journal",
-            "volume": "14"
+            "language": "en-US",
+            "publisher": "Oppla",
+            "title": "Green corridors: Ventilation corridors network, Stuttgart",
+            "title-short": "Green corridors",
+            "type": "webpage"
         },
         {
             "DOI": "10.3390/rs13040777",
             "ISSN": "2072-4292",
             "URL": "https://www.mdpi.com/2072-4292/13/4/777",
             "abstract": "Land cover information is essential in European Union spatial management, particularly that of invasive species, natural habitats, urbanization, and deforestation; therefore, the need for accurate and objective data and tools is critical. For this purpose, the European Union’s flagship program, the Corine Land Cover (CLC), was created. Intensive works are currently being carried out to prepare a new version of CLC+ by 2024. The geographical, climatic, and economic diversity of the European Union raises the challenge to verify various test areas’ methods and algorithms. Based on the Corine program’s precise guidelines, Sentinel-2 and Landsat 8 satellite images were tested to assess classification accuracy and regional and spatial development in three varied areas of Catalonia, Poland, and Romania. The method is dependent on two machine learning algorithms, Random Forest (RF) and Support Vector Machine (SVM). The bias of classifications was reduced using an iterative of randomized training, test, and verification pixels. The ease of the implementation of the used algorithms makes reproducing the results possible and comparable. The results show that an SVM with a radial kernel is the best classifier, followed by RF. The high accuracy classes that can be updated and classes that should be redefined are specified. The methodology’s potential can be used by developers of CLC+ products as a guideline for algorithms, sensors, and the possibilities and difficulties of classifying different CLC classes.",
-            "author": [
-                {
-                    "family": "Dabija",
-                    "given": "Anca"
-                },
-                {
-                    "family": "Kluczek",
-                    "given": "Marcin"
-                },
-                {
-                    "family": "Zagajewski",
-                    "given": "Bogdan"
-                },
-                {
-                    "family": "Raczko",
-                    "given": "Edwin"
-                },
-                {
-                    "family": "Kycko",
-                    "given": "Marlena"
-                },
-                {
-                    "family": "Al-Sulttani",
-                    "given": "Ahmed H."
-                },
-                {
-                    "family": "Tardà",
-                    "given": "Anna"
-                },
-                {
-                    "family": "Pineda",
-                    "given": "Lydia"
-                },
-                {
-                    "family": "Corbera",
-                    "given": "Jordi"
-                }
-            ],
-            "container-title": "Remote Sensing",
-            "id": "rs13040777",
-            "issue": "4",
-            "issued": {
+            "accessed": {
                 "date-parts": [
                     [
-                        2021
+                        2023,
+                        3,
+                        10
                     ]
                 ]
             },
-            "title": "Comparison of support vector machines and random forests for corine land cover mapping",
-            "type": "article-journal",
-            "volume": "13"
-        },
-        {
-            "DOI": "10.3390/rs13040777",
-            "URL": "https://www.mdpi.com/2072-4292/13/4/777",
             "author": [
                 {
                     "family": "Dabija",
@@ -237,7 +82,7 @@
             ],
             "container-title": "Remote Sensing",
             "id": "dabija2021",
-            "issue": "4",
+            "issue": "4, 4",
             "issued": {
                 "date-parts": [
                     [
@@ -246,66 +91,139 @@
                     ]
                 ]
             },
-            "language": "en",
-            "note": "Number: 4 Publisher: Multidisciplinary Digital Publishing Institute",
+            "keyword": "Braila,Catalonia,Corine,land cover mapping,Random Forest,Support Vector Machine,Warsaw",
+            "language": "en-US",
             "page": "777",
+            "publisher": "Multidisciplinary Digital Publishing Institute",
             "title": "Comparison of Support Vector Machines and Random Forests for Corine Land Cover Mapping",
             "type": "article-journal",
             "volume": "13"
         },
         {
-            "URL": "https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#object-based-image-analysis-obia",
-            "id": "eunyoung",
-            "title": "Eunyoung’s learning diary - 7. Classification II",
-            "type": ""
-        },
-        {
-            "URL": "https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#object-based-image-analysis-obia",
-            "id": "OBSA",
-            "title": "Eunyoung’s learning diary - 7. Classification II",
-            "type": ""
-        },
-        {
-            "URL": "https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#object-based-image-analysis-obia",
-            "id": "eunyounga",
-            "title": "Eunyoung’s learning diary - 7. Classification II",
-            "type": ""
-        },
-        {
-            "URL": "https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#object-based-image-analysis-obia",
-            "id": "eunyoungb",
-            "title": "Eunyoung’s learning diary - 7. Classification II",
-            "type": ""
-        },
-        {
-            "DOI": "10.1016/j.rse.2019.111630",
-            "URL": "https://www.sciencedirect.com/science/article/pii/S0034425719306509",
-            "author": [
-                {
-                    "family": "Foody",
-                    "given": "Giles M."
-                }
-            ],
-            "container-title": "Remote Sensing of Environment",
-            "id": "foody2020",
-            "issued": {
+            "URL": "https://gisgeography.com/obia-object-based-image-analysis-geobia/",
+            "abstract": "Object-based Image Analysis (OBIA) segments an image by grouping pixels together into vector objects. Using these objects, you classify as land cover types.",
+            "accessed": {
                 "date-parts": [
                     [
-                        2020,
+                        2023,
                         3,
-                        15
+                        11
                     ]
                 ]
             },
-            "language": "en",
-            "page": "111630",
-            "title": "Explaining the unsuitability of the kappa coefficient in the assessment and comparison of the accuracy of thematic maps obtained by image classification",
+            "author": [
+                {
+                    "family": "GISGeography"
+                }
+            ],
+            "id": "gisgeography2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014,
+                        7,
+                        9
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "publisher": "GIS Geography",
+            "title": "OBIA - Object-Based Image Analysis (GEOBIA)",
+            "type": "webpage"
+        },
+        {
+            "URL": "https://gisgeography.com/passive-active-sensors-remote-sensing/",
+            "abstract": "Active sensors illuminates its target and measures that reflected backscatter to the sensor. Passive sensors measure natural energy from the sun.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        3,
+                        24
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "GISGeography"
+                }
+            ],
+            "id": "gisgeography2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015,
+                        2,
+                        9
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "publisher": "GIS Geography",
+            "title": "Passive vs Active Sensors in Remote Sensing",
+            "type": "webpage"
+        },
+        {
+            "DOI": "10.3390/rs14102377",
+            "ISSN": "2072-4292",
+            "URL": "https://www.mdpi.com/2072-4292/14/10/2377",
+            "abstract": "Glacier snow line altitude (SLA) at the end of the ablation season is an indicator of the equilibrium line altitude (ELA), which is a key parameter for calculating and assessing glacier mass balance. Here, we present an automated algorithm to classify bare ice and snow cover on glaciers using Landsat series images and calculate the minimum annual glacier snow cover ratio (SCR) and maximum SLA for reference glaciers during the 1985–2020 period in Google Earth Engine. The calculated SCR and SLA values are verified using the observed glacier accumulation area ratio (AAR) and ELA. We select 14 reference glaciers from High Mountain Asia (HMA), the Caucasus, the Alps, and Western Canada, which represent four mountainous regions with extensive glacial development in the northern hemisphere. The SLA accuracy is ~73%, with a mean uncertainty of ±24 m, for 13 of the reference glaciers. Eight of these glaciers yield R2 > 0.5, and the other five glaciers yield R2 > 0.3 for their respective SCR–AAR relationships. Furthermore, 10 of these glaciers yield R2 > 0.5 and the other three glaciers yield R2 > 0.3 for their respective SLA–ELA relationships, which indicate that the calculated SLA from this algorithm provides a good fit to the ELA observations. However, Careser Glacier yields a poor fit between the SLA calculations and ELA observations owing to tremendous surface area changes during the analyzed time series; this indicates that glacier surface shape changes due to intense ablation will lead to a misclassification of the glacier surface, resulting in deviations between the SLA and ELA. Furthermore, cloud cover, shadows, and the Otsu method limitation will further affect the SLA calculation. The post-2000 SLA values are better than those obtained before 2000 because merging the Landsat series images reduces the temporal resolution, which allows the date of the calculated SLA to be closer to the date of the observed ELA. From a regional perspective, the glaciers in the Caucasus, HMA and the Alps yield better results than those in Western Canada. This algorithm can be applied to large regions, such as HMA, to obtain snow line estimates where manual approaches are exhaustive and/or unfeasible. Furthermore, new optical data, such as that from Sentinel-2, can be incorporated to further improve the algorithm results.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        2,
+                        25
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Li",
+                    "given": "Xiang"
+                },
+                {
+                    "family": "Wang",
+                    "given": "Ninglian"
+                },
+                {
+                    "family": "Wu",
+                    "given": "Yuwei"
+                }
+            ],
+            "container-title": "Remote Sensing",
+            "id": "li2022",
+            "issue": "10, 10",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        1
+                    ]
+                ]
+            },
+            "keyword": "equilibrium line altitude (ELA),glacier,Google Earth Engine (GEE),Landsat,snow line altitude (SLA)",
+            "language": "en-US",
+            "page": "2377",
+            "publisher": "Multidisciplinary Digital Publishing Institute",
+            "title": "Automated Glacier Snow Line Altitude Calculation Method Using Landsat Series Images in the Google Earth Engine Platform",
             "type": "article-journal",
-            "volume": "239"
+            "volume": "14"
         },
         {
             "DOI": "10.1016/j.asr.2010.01.006",
+            "ISSN": "0273-1177",
             "URL": "https://www.sciencedirect.com/science/article/pii/S0273117710000268",
+            "abstract": "This paper presents the results of the cross-validation of a multivariate logistic regression model using remote sensing data and GIS for landslide hazard analysis on the Penang, Cameron, and Selangor areas in Malaysia. Landslide locations in the study areas were identified by interpreting aerial photographs and satellite images, supported by field surveys. SPOT 5 and Landsat TM satellite imagery were used to map landcover and vegetation index, respectively. Maps of topography, soil type, lineaments and land cover were constructed from the spatial datasets. Ten factors which influence landslide occurrence, i.e., slope, aspect, curvature, distance from drainage, lithology, distance from lineaments, soil type, landcover, rainfall precipitation, and normalized difference vegetation index (ndvi), were extracted from the spatial database and the logistic regression coefficient of each factor was computed. Then the landslide hazard was analysed using the multivariate logistic regression coefficients derived not only from the data for the respective area but also using the logistic regression coefficients calculated from each of the other two areas (nine hazard maps in all) as a cross-validation of the model. For verification of the model, the results of the analyses were then compared with the field-verified landslide locations. Among the three cases of the application of logistic regression coefficient in the same study area, the case of Selangor based on the Selangor logistic regression coefficients showed the highest accuracy (94%), where as Penang based on the Penang coefficients showed the lowest accuracy (86%). Similarly, among the six cases from the cross application of logistic regression coefficient in other two areas, the case of Selangor based on logistic coefficient of Cameron showed highest (90%) prediction accuracy where as the case of Penang based on the Selangor logistic regression coefficients showed the lowest accuracy (79%). Qualitatively, the cross application model yields reasonable results which can be used for preliminary landslide hazard mapping.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        3,
+                        22
+                    ]
+                ]
+            },
             "author": [
                 {
                     "family": "Pradhan",
@@ -313,6 +231,7 @@
                 }
             ],
             "container-title": "Advances in Space Research",
+            "container-title-short": "Advances in Space Research",
             "id": "pradhan2010",
             "issue": "10",
             "issued": {
@@ -324,11 +243,323 @@
                     ]
                 ]
             },
-            "language": "en",
+            "keyword": "GIS,Hazard,Landslide,Malaysia,Multivariate logistic regression,Validation",
+            "language": "en-US",
             "page": "1244-1256",
             "title": "Remote sensing and GIS-based landslide hazard analysis and cross-validation using multivariate logistic regression model on three test areas in Malaysia",
             "type": "article-journal",
             "volume": "45"
+        },
+        {
+            "URL": "https://www.intermap.com/blog/orthorectification-in-a-nutshell",
+            "abstract": "Raw satellite imagery contain distortions, which are induced by sensor orientation, topographical variation and the curvature of the earth.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        3,
+                        24
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Setyawan",
+                    "given": "Eric"
+                }
+            ],
+            "id": "setyawan",
+            "language": "en-US",
+            "title": "Orthorectification in a Nutshell",
+            "type": "webpage"
+        },
+        {
+            "URL": "https://www.epa.gov/green-infrastructure/reduce-urban-heat-island-effect",
+            "abstract": "An overview of reducing the urban heat island effect.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        3,
+                        8
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "US EPA",
+                    "given": "OW"
+                }
+            ],
+            "genre": "Overviews and Factsheets",
+            "id": "usepa2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015,
+                        10,
+                        1
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "title": "Reduce Urban Heat Island Effect",
+            "type": "webpage"
+        },
+        {
+            "URL": "https://www.eea.europa.eu/data-and-maps/figures/climate-analysis-map-for-the",
+            "abstract": "-",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        3,
+                        8
+                    ]
+                ]
+            },
+            "genre": "Figure",
+            "id": "zotero-174",
+            "language": "en-US",
+            "title": "Climate analysis map for the Stuttgart region, also showing so-called ventilation paths along with other climate related features — European Environment Agency",
+            "type": "webpage"
+        },
+        {
+            "URL": "https://climate-adapt.eea.europa.eu/en/metadata/case-studies/stuttgart-combating-the-heat-island-effect-and-poor-air-quality-with-green-ventilation-corridors",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        3,
+                        8
+                    ]
+                ]
+            },
+            "id": "zotero-178",
+            "title": "Stuttgart: Combating the heat island effect and poor air quality with ventilation corridors and green-blue infrastructure — English",
+            "title-short": "Stuttgart",
+            "type": "webpage"
+        },
+        {
+            "URL": "https://www.ngii.go.kr/eng/content.do?sq=115",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        3,
+                        24
+                    ]
+                ]
+            },
+            "id": "zotero-318",
+            "title": "National Geographic Information Institute- Orthogonal Imagery DB",
+            "type": "webpage"
+        },
+        {
+            "URL": "https://www.eric-kim.net/eric-kim-net/posts/1/kernel_trick.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        3,
+                        24
+                    ]
+                ]
+            },
+            "id": "zotero-322",
+            "title": "The Kernel Trick",
+            "type": "webpage"
+        },
+        {
+            "URL": "https://www.eea.europa.eu/help/faq/what-is-corine-land-cover",
+            "abstract": "Information on the environment for those involved in developing, adopting, implementing and evaluating environmental policy, and also the general public",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        3,
+                        24
+                    ]
+                ]
+            },
+            "genre": "HelpCenter FAQ",
+            "id": "zotero-324",
+            "language": "en-US",
+            "title": "What is CORINE land cover? — European Environment Agency",
+            "title-short": "What is CORINE land cover?",
+            "type": "webpage"
+        },
+        {
+            "URL": "https://gsp.humboldt.edu/olm_2019/courses/GSP_216_Online/lesson6-2/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        3,
+                        24
+                    ]
+                ]
+            },
+            "id": "zotero-326",
+            "title": "Accuracy Assessment",
+            "type": "webpage"
+        },
+        {
+            "URL": "https://scikit-learn/stable/modules/cross_validation.html",
+            "abstract": "Learning the parameters of a prediction function and testing it on the same data is a methodological mistake: a model that would just repeat the labels of the samples that it has just seen would ha...",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        3,
+                        24
+                    ]
+                ]
+            },
+            "id": "zotero-328",
+            "language": "en-US",
+            "publisher": "scikit-learn",
+            "title": "3.1. Cross-validation: Evaluating estimator performance",
+            "title-short": "3.1. Cross-validation",
+            "type": "webpage"
+        },
+        {
+            "URL": "https://andrewmaclachlan.github.io/CASA0023-lecture-1/#31",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        3,
+                        24
+                    ]
+                ]
+            },
+            "id": "zotero-336",
+            "title": "Remotely Sensing Cities and Environments",
+            "type": "webpage"
+        },
+        {
+            "URL": "http://www.molit.go.kr/USR/policyData/m_34681/dtl.jsp?id=4453",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        2,
+                        16
+                    ]
+                ]
+            },
+            "id": "zotero-59",
+            "title": "제5차 국토종합계획(2020~2040) 정책정보 상세보기",
+            "type": "webpage"
+        },
+        {
+            "URL": "https://earthengine.google.com/faq/",
+            "abstract": "Earth Engine combines a multi-petabyte catalog of satellite imagery and geospatial datasets with planetary-scale analysisGoogle capabilities and makes it available for scientists, researchers, and developers to detect changes, map trends, and quantify differences on the Earth’s surface.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        2,
+                        16
+                    ]
+                ]
+            },
+            "id": "zotero-61",
+            "title": "FAQ – Google Earth Engine",
+            "type": "webpage"
+        },
+        {
+            "URL": "https://www.undp.org/sustainable-development-goals/life-on-land",
+            "abstract": "Human life depends on the earth as much as the ocean for our sustenance and livelihoods. Plant life provides 80 percent of the human diet, and we rely on agriculture as an important economic resources. Forests cover 30 percent of the Earth’s surface, provide vital habitats for millions of species, and important sources for clean air and water, as well as being crucial for combating climate change. Every year, 13 million hectares of forests are lost, while the persistent degradation of drylands has led to the desertification of 3.6 billion hectares, disproportionately affecting poor communities. While 15 percent of land is protected, biodiversity is still at risk. Nearly 7,000 species of animals and plants have been illegally traded. Wildlife trafficking not only erodes biodiversity, but creates insecurity, fuels conflict, and feeds corruption. Urgent action must be taken to reduce the loss of natural habitats and biodiversity which are part of our common heritage and support global food and water security, climate change mitigation and adaptation, and peace and security.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        2,
+                        25
+                    ]
+                ]
+            },
+            "id": "zotero-63",
+            "language": "en-US",
+            "publisher": "UNDP",
+            "title": "Goal 15: Life on land | Sustainable Development Goals | United Nations Development Programme",
+            "title-short": "Goal 15",
+            "type": "webpage"
+        },
+        {
+            "URL": "https://sdgs.un.org/goals/goal15",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        2,
+                        25
+                    ]
+                ]
+            },
+            "id": "zotero-65",
+            "title": "Goal 15 | Department of Economic and Social Affairs",
+            "type": "webpage"
+        },
+        {
+            "URL": "https://www.jeju.go.kr/pub/skin/skin_v21.03.0/doc.html?fn=95ff2d28-8dba-4927-a65e-978c03bbb743.pdf&rs=/files/convert2020/202104/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        2,
+                        25
+                    ]
+                ]
+            },
+            "id": "zotero-67",
+            "title": "문서뷰어",
+            "type": "webpage"
+        },
+        {
+            "DOI": "10.3390/rs6032393",
+            "URL": "https://www.mdpi.com/2072-4292/6/3/2393",
+            "author": [
+                {
+                    "family": "Khan",
+                    "given": "Sadiq I."
+                },
+                {
+                    "family": "Hong",
+                    "given": "Yang"
+                },
+                {
+                    "family": "Gourley",
+                    "given": "Jonathan J."
+                },
+                {
+                    "family": "Khattak",
+                    "given": "Muhammad Umar"
+                },
+                {
+                    "family": "De Groeve",
+                    "given": "Tom"
+                }
+            ],
+            "container-title": "Remote Sensing",
+            "id": "khan2014",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014,
+                        3
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 3 Publisher: Multidisciplinary Digital Publishing Institute",
+            "page": "2393-2407",
+            "title": "Multi-Sensor Imaging and Space-Ground Cross-Validation for 2010 Flood along Indus River, Pakistan",
+            "type": "article-journal",
+            "volume": "6"
         }
     ],
     "project_biblios": [

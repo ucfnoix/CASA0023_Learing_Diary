@@ -59,7 +59,7 @@ knitr::include_graphics('images/SPA.png')
 #### 7.1.4.1 Why does accuracy important?
 
 -   It determines the quality of the information derived from remotely sensed data.
--   Remote sensed data are often used for mapping and developing environmental models that are used for management and decision making purposes. / Source: [GSP216](https://gsp.humboldt.edu/olm_2019/courses/GSP_216_Online/lesson6-2/index.html#:~:text=Accuracy%20is%20important%20because%20remote,management%20and%20decision%20making%20purposes.)
+-   Remote sensed data are often used for mapping and developing environmental models that are used for management and decision making purposes. (Source: [GSP216](https://gsp.humboldt.edu/olm_2019/courses/GSP_216_Online/lesson6-2/index.html#:~:text=Accuracy%20is%20important%20because%20remote,management%20and%20decision%20making%20purposes.))
 -   Therefore, the validity of classification results must be verified.
 
 #### 7.1.4.2 Error Matrix
@@ -100,7 +100,7 @@ knitr::include_graphics('images/k-fold.png')
 
 -   Evaluate performance by dividing data over and over again and learning multiple models.
 
--   Calculate the average performance of multiple sets of training/testing data -\> increased accuracy.
+-   Calculate the average performance of multiple sets of training/testing data -\> **increased accuracy**
 
     +------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
     | **Advantage ⭕**                                                                         | **Disadvantage ❌**                                                                     |
@@ -116,10 +116,58 @@ If Spatial cross-validation is not done, the model would have better accuracy th
 
 ## 7.2 Application
 
-@pradhan2010 used remote sensing data (SPOT 5, Landsat TM) and GIS for landslide hazard analysis in the Penang, Cameron and Selangor areas in Malaysia. Ten factors were computed for the logistic regression coefficient: slope, distance from drainage, soil type, land cover, etc. And then, the multivariate logistic regression model was applied and cross-validated for the three study areas. As a result, \~ as below.
+### 7.2.1 Landslide hazard analysis in Malaysia
 
-(Fig 3. )
+@pradhan2010 used remote sensing data (SPOT 5, Landsat TM) and GIS for landslide hazard analysis in the Penang, Cameron and Selangor areas in Malaysia. Ten factors were computed for the logistic regression coefficient: slope, distance from drainage, soil type, land cover, etc. And then, the multivariate logistic regression model was applied and cross-validated for the three study areas.
+
+As a result, Selangor showed the highest accuracy(94%), whereas Penang showed the lowest accuracy(86%) based on the same research area. In using cross-validation to improve accuracy, the case of Selangor based on the logistic coefficient of Cameron showed the highest (90%) prediction accuracy. **It shows it is possible to get a meaningful result for preliminary landslide hazard mapping when using the cross-application model.**
+
+```{r echo=FALSE, out.wdth = "90%", fig.align='center', cache=TRUE, fig.cap="Source: [Biswajeet Pradhan](https://doi.org/10.1016/j.asr.2010.01.006)"}
+knitr::include_graphics('images/wk7_image.jpeg')
+```
+
+*Fig. 3. Landslide hazard maps of study areas using coefficients of other two areas; (A) Penang based on logistic regression coefficients of the Cameron datasets; (B) Penang based on logistic regression coefficients of the Selangor datasets; (C) Cameron based on logistic regression coefficients of the Penang datasets; (D) Cameron based on logistic regression coefficients of the Selangor datasets; (E) Selangor based on logistic regression coefficients of the Penang datasets; and (F) Selangor based on logistic regression coefficients of the Cameron datasets.*
+
+### 7.2.2 Flood in Pakistan
+
+According to the study of @khan2014, floods in Pakistan's lower Indus River basin were monitored. The data sets used are as follows:
+
++-------------------------------------------------+-----------------------------------------------------------------+
+| Dataset                                         | Why it is used                                                  |
++=================================================+=================================================================+
+| MODIS                                           | to delineate the extent of the 2010 flood along the Indus River |
++-------------------------------------------------+-----------------------------------------------------------------+
+| Advanced Synthetic Aperture Radar (ASAR)        | to detect floods over the lower Indus river basin               |
++-------------------------------------------------+-----------------------------------------------------------------+
+| Advanced Microwave Scanning Radiometer (AMSR-E) | a proxy for river discharge\*                                   |
++-------------------------------------------------+-----------------------------------------------------------------+
+| Tropical Rainfall Measuring Mission (TRMM)      | to estimate rainfall                                            |
++-------------------------------------------------+-----------------------------------------------------------------+
+
+\* **the water surface signal detected by AMSR-E was cross-validated with ground-based river discharge observations** at multiple streamflow stations along the main Indus River.
+
+```{r echo=FALSE, out.wdth = "70%", fig.align='center', cache=TRUE}
+knitr::include_graphics('images/remotesensing-06-02393f5a-1024.png')
+```
+
+```{r echo=FALSE, out.wdth = "50%", fig.align='center', cache=TRUE, fig.cap="Source: [Khan,S.I. et al.](https://doi.org/10.3390/rs6032393)"}
+knitr::include_graphics('images/remotesensing-06-02393f5b-1024.png')
+```
+
+*Figure 5. Precipitation comparison of satellite with rain gauge observations for 2010 Monsoon season over (31--35°N latitude bands; (a) mean precipitation comparison between TRMM 3B42V7 and Rain gauge; (b) Bias (%); (c) Pearson's correlation coefficient; (d) Root Mean Squared Error.*
+
+In this study, the Pearson correlation coefficient and four statistical indices were used to verify the error and bias between satellite precipitation and gauge observations.
+
+As a result, at the daily scale of the 2010 flood year, the statistical index was related to the geo-topographic distribution of gauge stations as well as the precipitation intensity, as shown in Figure 5b. In addition, there was an overall high correlation at the higher latitudes compared with other satellite precipitation products, as shown in Figure 5c.
+
+It has been found that this prediction can provide significant improvements to river flow forecasts downstream in Pakistan, a region with limited availability of ground based rain gauges and river discharge measurements.
 
 ## 7.3 Reflection
 
--   ML
+-   In analysing specific data for research/study, **the reliability of the research results depends on the accuracy of the data.** We learned various (image) classification methods last week (week 6) and also learned how to check the accuracy accordingly this week (week 7). It was not that unfamiliar to understand for me because it was related to the spatial correlation I learned in the GIS module in the first term.
+
+-   It was interesting that we can use machine learning technology for cross-validation by repeating each data differently. When it comes to [7.2.2](https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#flood-in-pakistan), there are two noteworthy results: 1. *There is no perfect single sensor* for reliable flood monitoring. 2. However, *utilising various remote sensing data can be the way* forward in flood disaster risk reduction. It made me think again that **it was up to researchers/people to decide how to use this technology.**
+
+-   In the case of the Kappa coefficient, it was surprising that it still continues to be used in formal research papers even though it is an accuracy measurement method that does not work well.
+
+-   I was also very interested to learn about the principle of sub-pixel analysis. I haven't thought about the principle of image classification and how it works, but it is like a fun game after learning this concept! (p.s. I drew a picture on [7.1.3](https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#sub-pixel-analysis) while remembering Andy's lecture in class, and I especially like my river, which looks like the Milky Way🤭)

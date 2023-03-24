@@ -179,7 +179,11 @@ div.csl-indent {
   <li><a href="#accuracy" id="toc-accuracy" class="nav-link" data-scroll-target="#accuracy">7.1.4 Accuracy</a></li>
   <li><a href="#how-to-improve-the-accuracy-of-our-data" id="toc-how-to-improve-the-accuracy-of-our-data" class="nav-link" data-scroll-target="#how-to-improve-the-accuracy-of-our-data">7.1.5 How to improve the accuracy of our data?</a></li>
   </ul></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">7.2 Application</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">7.2 Application</a>
+  <ul class="collapse">
+  <li><a href="#landslide-hazard-analysis-in-malaysia" id="toc-landslide-hazard-analysis-in-malaysia" class="nav-link" data-scroll-target="#landslide-hazard-analysis-in-malaysia">7.2.1 Landslide hazard analysis in Malaysia</a></li>
+  <li><a href="#flood-in-pakistan" id="toc-flood-in-pakistan" class="nav-link" data-scroll-target="#flood-in-pakistan">7.2.2 Flood in Pakistan</a></li>
+  </ul></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">7.3 Reflection</a></li>
   </ul>
 </nav>
@@ -307,7 +311,7 @@ Sub pixel analysis is also called as
 <h4 class="anchored" data-anchor-id="why-does-accuracy-important">7.1.4.1 Why does accuracy important?</h4>
 <ul>
 <li>It determines the quality of the information derived from remotely sensed data.</li>
-<li>Remote sensed data are often used for mapping and developing environmental models that are used for management and decision making purposes. / Source: <a href="https://gsp.humboldt.edu/olm_2019/courses/GSP_216_Online/lesson6-2/index.html#:~:text=Accuracy%20is%20important%20because%20remote,management%20and%20decision%20making%20purposes.">GSP216</a></li>
+<li>Remote sensed data are often used for mapping and developing environmental models that are used for management and decision making purposes. (Source: <a href="https://gsp.humboldt.edu/olm_2019/courses/GSP_216_Online/lesson6-2/index.html#:~:text=Accuracy%20is%20important%20because%20remote,management%20and%20decision%20making%20purposes.">GSP216</a>)</li>
 <li>Therefore, the validity of classification results must be verified.</li>
 </ul>
 </section>
@@ -375,7 +379,7 @@ Sub pixel analysis is also called as
 </div>
 <ul>
 <li><p>Evaluate performance by dividing data over and over again and learning multiple models.</p></li>
-<li><p>Calculate the average performance of multiple sets of training/testing data -&gt; increased accuracy.</p>
+<li><p>Calculate the average performance of multiple sets of training/testing data -&gt; <strong>increased accuracy</strong></p>
 <table class="table">
 <colgroup>
 <col style="width: 50%">
@@ -403,19 +407,97 @@ Sub pixel analysis is also called as
 </section>
 <section id="application" class="level2">
 <h2 class="anchored" data-anchor-id="application">7.2 Application</h2>
-<p><span class="citation" data-cites="pradhan2010">Pradhan (<a href="references.html#ref-pradhan2010" role="doc-biblioref">2010</a>)</span> used remote sensing data (SPOT 5, Landsat TM) and GIS for landslide hazard analysis in the Penang, Cameron and Selangor areas in Malaysia. Ten factors were computed for the logistic regression coefficient: slope, distance from drainage, soil type, land cover, etc. And then, the multivariate logistic regression model was applied and cross-validated for the three study areas. As a result, ~ as below.</p>
-<p>(Fig 3. )</p>
+<section id="landslide-hazard-analysis-in-malaysia" class="level3">
+<h3 class="anchored" data-anchor-id="landslide-hazard-analysis-in-malaysia">7.2.1 Landslide hazard analysis in Malaysia</h3>
+<p><span class="citation" data-cites="pradhan2010">Pradhan (<a href="references.html#ref-pradhan2010" role="doc-biblioref">2010</a>)</span> used remote sensing data (SPOT 5, Landsat TM) and GIS for landslide hazard analysis in the Penang, Cameron and Selangor areas in Malaysia. Ten factors were computed for the logistic regression coefficient: slope, distance from drainage, soil type, land cover, etc. And then, the multivariate logistic regression model was applied and cross-validated for the three study areas.</p>
+<p>As a result, Selangor showed the highest accuracy(94%), whereas Penang showed the lowest accuracy(86%) based on the same research area. In using cross-validation to improve accuracy, the case of Selangor based on the logistic coefficient of Cameron showed the highest (90%) prediction accuracy. <strong>It shows it is possible to get a meaningful result for preliminary landslide hazard mapping when using the cross-application model.</strong></p>
+<div class="cell" data-layout-align="center" data-out.wdth="90%" data-hash="wk_7_classification_2_cache/html/unnamed-chunk-4_9d96370313faa5511163576cedafd329">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/wk7_image.jpeg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://doi.org/10.1016/j.asr.2010.01.006">Biswajeet Pradhan</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><em>Fig. 3. Landslide hazard maps of study areas using coefficients of other two areas; (A) Penang based on logistic regression coefficients of the Cameron datasets; (B) Penang based on logistic regression coefficients of the Selangor datasets; (C) Cameron based on logistic regression coefficients of the Penang datasets; (D) Cameron based on logistic regression coefficients of the Selangor datasets; (E) Selangor based on logistic regression coefficients of the Penang datasets; and (F) Selangor based on logistic regression coefficients of the Cameron datasets.</em></p>
+</section>
+<section id="flood-in-pakistan" class="level3">
+<h3 class="anchored" data-anchor-id="flood-in-pakistan">7.2.2 Flood in Pakistan</h3>
+<p>According to the study of <span class="citation" data-cites="khan2014">Khan et al. (<a href="references.html#ref-khan2014" role="doc-biblioref">2014</a>)</span>, floods in Pakistan’s lower Indus River basin were monitored. The data sets used are as follows:</p>
+<table class="table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dataset</th>
+<th>Why it is used</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MODIS</td>
+<td>to delineate the extent of the 2010 flood along the Indus River</td>
+</tr>
+<tr class="even">
+<td>Advanced Synthetic Aperture Radar (ASAR)</td>
+<td>to detect floods over the lower Indus river basin</td>
+</tr>
+<tr class="odd">
+<td>Advanced Microwave Scanning Radiometer (AMSR-E)</td>
+<td>a proxy for river discharge*</td>
+</tr>
+<tr class="even">
+<td>Tropical Rainfall Measuring Mission (TRMM)</td>
+<td>to estimate rainfall</td>
+</tr>
+</tbody>
+</table>
+<p>* <strong>the water surface signal detected by AMSR-E was cross-validated with ground-based river discharge observations</strong> at multiple streamflow stations along the main Indus River.</p>
+<div class="cell" data-layout-align="center" data-out.wdth="70%" data-hash="wk_7_classification_2_cache/html/unnamed-chunk-5_1db5d2f760b2e6ea2ef1707f7e98dfd2">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/remotesensing-06-02393f5a-1024.png" class="img-fluid figure-img" width="512"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center" data-out.wdth="50%" data-hash="wk_7_classification_2_cache/html/unnamed-chunk-6_20a8d23a75fc51bf4a011413d7455815">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/remotesensing-06-02393f5b-1024.png" class="img-fluid figure-img" width="512"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://doi.org/10.3390/rs6032393">Khan,S.I. et al.</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><em>Figure 5. Precipitation comparison of satellite with rain gauge observations for 2010 Monsoon season over (31–35°N latitude bands; (a) mean precipitation comparison between TRMM 3B42V7 and Rain gauge; (b) Bias (%); (c) Pearson’s correlation coefficient; (d) Root Mean Squared Error.</em></p>
+<p>In this study, the Pearson correlation coefficient and four statistical indices were used to verify the error and bias between satellite precipitation and gauge observations.</p>
+<p>As a result, at the daily scale of the 2010 flood year, the statistical index was related to the geo-topographic distribution of gauge stations as well as the precipitation intensity, as shown in Figure 5b. In addition, there was an overall high correlation at the higher latitudes compared with other satellite precipitation products, as shown in Figure 5c.</p>
+<p>It has been found that this prediction can provide significant improvements to river flow forecasts downstream in Pakistan, a region with limited availability of ground based rain gauges and river discharge measurements.</p>
+</section>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">7.3 Reflection</h2>
 <ul>
-<li>ML</li>
+<li><p>In analysing specific data for research/study, <strong>the reliability of the research results depends on the accuracy of the data.</strong> We learned various (image) classification methods last week (week 6) and also learned how to check the accuracy accordingly this week (week 7). It was not that unfamiliar to understand for me because it was related to the spatial correlation I learned in the GIS module in the first term.</p></li>
+<li><p>It was interesting that we can use machine learning technology for cross-validation by repeating each data differently. When it comes to <a href="https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#flood-in-pakistan">7.2.2</a>, there are two noteworthy results: 1. <em>There is no perfect single sensor</em> for reliable flood monitoring. 2. However, <em>utilising various remote sensing data can be the way</em> forward in flood disaster risk reduction. It made me think again that <strong>it was up to researchers/people to decide how to use this technology.</strong></p></li>
+<li><p>In the case of the Kappa coefficient, it was surprising that it still continues to be used in formal research papers even though it is an accuracy measurement method that does not work well.</p></li>
+<li><p>I was also very interested to learn about the principle of sub-pixel analysis. I haven’t thought about the principle of image classification and how it works, but it is like a fun game after learning this concept! (p.s. I drew a picture on <a href="https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#sub-pixel-analysis">7.1.3</a> while remembering Andy’s lecture in class, and I especially like my river, which looks like the Milky Way🤭)</p></li>
 </ul>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-khan2014" class="csl-entry" role="doc-biblioentry">
+Khan, Sadiq I., Yang Hong, Jonathan J. Gourley, Muhammad Umar Khattak, and Tom De Groeve. 2014. <span>“Multi-Sensor Imaging and Space-Ground Cross-Validation for 2010 Flood Along Indus River, Pakistan.”</span> <em>Remote Sensing</em> 6 (3): 2393–2407. <a href="https://doi.org/10.3390/rs6032393">https://doi.org/10.3390/rs6032393</a>.
+</div>
 <div id="ref-pradhan2010" class="csl-entry" role="doc-biblioentry">
-Pradhan, Biswajeet. 2010. <span>“Remote Sensing and GIS-Based Landslide Hazard Analysis and Cross-Validation Using Multivariate Logistic Regression Model on Three Test Areas in Malaysia.”</span> <em>Advances in Space Research</em> 45 (10): 1244–56. <a href="https://doi.org/10.1016/j.asr.2010.01.006">https://doi.org/10.1016/j.asr.2010.01.006</a>.
+Pradhan, Biswajeet. 2010. <span>“Remote Sensing and <span class="nocase">GIS-based</span> Landslide Hazard Analysis and Cross-Validation Using Multivariate Logistic Regression Model on Three Test Areas in <span>Malaysia</span>.”</span> <em>Advances in Space Research</em> 45 (10): 1244–56. <a href="https://doi.org/10.1016/j.asr.2010.01.006">https://doi.org/10.1016/j.asr.2010.01.006</a>.
 </div>
 </div>
 </section>
