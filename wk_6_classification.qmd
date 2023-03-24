@@ -1,13 +1,15 @@
 # 6. Classification I {.unnumbered}
 
 This is a learning diary for week 6.\
-Let's find out how to analyse remotely sensed images, especially Land Use/Land Cover(LULC), with various ways!
+Let's find out how to analyse remotely sensed images, especially Land Use/Land Cover(LULC), in various ways!
 
 ## 6.1 Summary
 
+Before having a look at some classification methods, we need to think about our perception system first!
+
 ### 6.1.1 How do we know? 🤔
 
-Your intuition! We can make judgments or conclusions about specific knowledge from our experience. It is called **inductive learning** and can be leveraged to analyze remote-sensing images.
+Follow your intuition! We can make judgments or conclusions about specific knowledge from our experience. It is called **inductive learning** and can be leveraged to analyze remote-sensing images.
 
 ### 6.1.2 How does my computer know? 🤖
 
@@ -64,12 +66,12 @@ knitr::include_graphics('images/how-random-forest-classifier-work.png')
 
 ### 6.1.5 Three types of Image Classification
 
-| Supervised Classification                             | Unsupervised Classification                              | Object-Based Image Analysis                                                                                                        |
-|---------------------------|----------------------------|------------------|
-| Pattern recognition or machine learning               | clustering                                               | [Week 7_7.1.2 OBIA](https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#object-based-image-analysis-obia) |
-| Parametric (normal distribution) : Maximum likelihood | k-means                                                  |                                                                                                                                    |
-| non parametric (not normal) : Support Vector Machine  | ISODATA                                                  |                                                                                                                                    |
-|                                                       | cluster busting = masking (removing unsuitable clusters) |                                                                                                                                    |
+| Supervised Classification                             | Unsupervised Classification                              | Object-Based Image Analysis                                                                                                                |
+|--------------------------|---------------------------|------------------|
+| Pattern recognition or machine learning               | clustering                                               | [Week 7_Section 7.1.2 OBIA](https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#object-based-image-analysis-obia) |
+| Parametric (normal distribution) : Maximum likelihood | k-means                                                  |                                                                                                                                            |
+| non parametric (not normal) : Support Vector Machine  | ISODATA                                                  |                                                                                                                                            |
+|                                                       | cluster busting = masking (removing unsuitable clusters) |                                                                                                                                            |
 
 #### 6.1.5.1 Maximum Likelihood Eastimation (MLE)
 
@@ -106,7 +108,7 @@ knitr::include_graphics('images/kerneltrick_2.png')
 
 ## 6.2 Application
 
-According to [@dabija2021], European Union(EU) manages the land cover information using CORINE Land Cover(CLC).
+According to @dabija2021, European Union(EU) manages the land cover information using CORINE Land Cover(CLC).
 
 ::: callout-note
 ## What is CORINE Land Cover(CLC)?
@@ -135,5 +137,7 @@ knitr::include_graphics('images/20230310_141108.png')
 ## 6.3 Reflection
 
 -   The key to what we learned this week is that each classification method essentially slices the data differently.
--   It was interesting that the ML technique was used to analyse the remote sensing data. In particular, it was amazing that the SVM method separates data using hyperplane, going further from the existing classification methods.
+-   It was interesting that the ML technique was used to analyse the remote sensing data. In particular, in terms of the Kernel trick, changing the dimension for data classification was really creative! 💡
+-   Also, it was amazing that the SVM method separates data using hyperplane, and the classification results might vary depending on its type: Hard margin or soft margin.
+-   Many classification papers use Random forest and SVM methods both. But it doesn't mean SVM is always the best method to use, even though SVM is the latest classification method.
 -   It still takes work to fully understand the mathematical principles of each classification method (which makes me feel dizzy every time I learn it 🙄). However, it was worth remembering that the criteria that we intuitively thought and classified were developed for computers and applied for.

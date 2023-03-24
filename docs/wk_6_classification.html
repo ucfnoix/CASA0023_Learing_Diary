@@ -205,12 +205,13 @@ div.csl-indent {
 </header>
 
 <p>This is a learning diary for week 6.<br>
-Let’s find out how to analyse remotely sensed images, especially Land Use/Land Cover(LULC), with various ways!</p>
+Let’s find out how to analyse remotely sensed images, especially Land Use/Land Cover(LULC), in various ways!</p>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">6.1 Summary</h2>
+<p>Before having a look at some classification methods, we need to think about our perception system first!</p>
 <section id="how-do-we-know" class="level3">
 <h3 class="anchored" data-anchor-id="how-do-we-know">6.1.1 How do we know? 🤔</h3>
-<p>Your intuition! We can make judgments or conclusions about specific knowledge from our experience. It is called <strong>inductive learning</strong> and can be leveraged to analyze remote-sensing images.</p>
+<p>Follow your intuition! We can make judgments or conclusions about specific knowledge from our experience. It is called <strong>inductive learning</strong> and can be leveraged to analyze remote-sensing images.</p>
 </section>
 <section id="how-does-my-computer-know" class="level3">
 <h3 class="anchored" data-anchor-id="how-does-my-computer-know">6.1.2 How does my computer know? 🤖</h3>
@@ -311,7 +312,7 @@ Let’s find out how to analyse remotely sensed images, especially Land Use/Land
 <tr class="odd">
 <td>Pattern recognition or machine learning</td>
 <td>clustering</td>
-<td><a href="https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#object-based-image-analysis-obia">Week 7_7.1.2 OBIA</a></td>
+<td><a href="https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#object-based-image-analysis-obia">Week 7_Section 7.1.2 OBIA</a></td>
 </tr>
 <tr class="even">
 <td>Parametric (normal distribution) : Maximum likelihood</td>
@@ -395,7 +396,7 @@ Let’s find out how to analyse remotely sensed images, especially Land Use/Land
 </section>
 <section id="application" class="level2">
 <h2 class="anchored" data-anchor-id="application">6.2 Application</h2>
-<p>According to <span class="citation" data-cites="dabija2021">(<a href="references.html#ref-dabija2021" role="doc-biblioref">Dabija et al. 2021</a>)</span>, European Union(EU) manages the land cover information using CORINE Land Cover(CLC).</p>
+<p>According to <span class="citation" data-cites="dabija2021">Dabija et al. (<a href="references.html#ref-dabija2021" role="doc-biblioref">2021</a>)</span>, European Union(EU) manages the land cover information using CORINE Land Cover(CLC).</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -443,14 +444,16 @@ What is CORINE Land Cover(CLC)?
 <h2 class="anchored" data-anchor-id="reflection">6.3 Reflection</h2>
 <ul>
 <li>The key to what we learned this week is that each classification method essentially slices the data differently.</li>
-<li>It was interesting that the ML technique was used to analyse the remote sensing data. In particular, it was amazing that the SVM method separates data using hyperplane, going further from the existing classification methods.</li>
+<li>It was interesting that the ML technique was used to analyse the remote sensing data. In particular, in terms of the Kernel trick, changing the dimension for data classification was really creative! 💡</li>
+<li>Also, it was amazing that the SVM method separates data using hyperplane, and the classification results might vary depending on its type: Hard margin or soft margin.</li>
+<li>Many classification papers use Random forest and SVM methods both. But it doesn’t mean SVM is always the best method to use, even though SVM is the latest classification method.</li>
 <li>It still takes work to fully understand the mathematical principles of each classification method (which makes me feel dizzy every time I learn it 🙄). However, it was worth remembering that the criteria that we intuitively thought and classified were developed for computers and applied for.</li>
 </ul>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
 <div id="ref-dabija2021" class="csl-entry" role="doc-biblioentry">
-Dabija, Anca, Marcin Kluczek, Bogdan Zagajewski, Edwin Raczko, Marlena Kycko, Ahmed H. Al-Sulttani, Anna Tardà, Lydia Pineda, and Jordi Corbera. 2021. <span>“Comparison of Support Vector Machines and Random Forests for Corine Land Cover Mapping.”</span> <em>Remote Sensing</em> 13 (4): 777. <a href="https://doi.org/10.3390/rs13040777">https://doi.org/10.3390/rs13040777</a>.
+Dabija, Anca, Marcin Kluczek, Bogdan Zagajewski, Edwin Raczko, Marlena Kycko, Ahmed H. Al-Sulttani, Anna Tardà, Lydia Pineda, and Jordi Corbera. 2021. <span>“Comparison of <span>Support Vector Machines</span> and <span>Random Forests</span> for <span>Corine Land Cover Mapping</span>.”</span> <em>Remote Sensing</em> 13 (4, 4): 777. <a href="https://doi.org/10.3390/rs13040777">https://doi.org/10.3390/rs13040777</a>.
 </div>
 </div>
 </section>

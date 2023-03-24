@@ -560,6 +560,176 @@
             "title": "Multi-Sensor Imaging and Space-Ground Cross-Validation for 2010 Flood along Indus River, Pakistan",
             "type": "article-journal",
             "volume": "6"
+        },
+        {
+            "URL": "https://www.intermap.com/blog/orthorectification-in-a-nutshell",
+            "author": [
+                {
+                    "family": "Setyawan",
+                    "given": "Eric"
+                }
+            ],
+            "id": "setyawana",
+            "language": "en",
+            "title": "Orthorectification in a Nutshell",
+            "type": ""
+        },
+        {
+            "URL": "https://www.ngii.go.kr/eng/content.do?sq=115",
+            "id": "national",
+            "title": "National geographic information institute- orthogonal imagery DB",
+            "type": ""
+        },
+        {
+            "DOI": "10.1109/IGARSS.2018.8518890",
+            "author": [
+                {
+                    "family": "Sola",
+                    "given": "I."
+                },
+                {
+                    "family": "Álvarez-Mozos",
+                    "given": "J."
+                },
+                {
+                    "family": "González-Audícana",
+                    "given": "M."
+                }
+            ],
+            "id": "sola2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018,
+                        7
+                    ]
+                ]
+            },
+            "note": "ISSN: 2153-7003",
+            "page": "5940-5943",
+            "title": "IGARSS 2018 - 2018 IEEE international geoscience and remote sensing symposium",
+            "type": "paper-conference"
+        },
+        {
+            "URL": "https://sdgs.un.org/goals/goal15",
+            "id": "goal15",
+            "title": "Goal 15 | department of economic and social affairs",
+            "type": ""
+        },
+        {
+            "URL": "https://www.undp.org/sustainable-development-goals/life-on-land",
+            "id": "goal15:",
+            "language": "en",
+            "title": "Goal 15: Life on land | Sustainable Development Goals | United Nations Development Programme",
+            "title-short": "Goal 15",
+            "type": ""
+        },
+        {
+            "URL": "https://earthengine.google.com/faq/",
+            "id": "faq-go",
+            "title": "FAQ  google earth engine",
+            "type": ""
+        },
+        {
+            "URL": "https://www.eea.europa.eu/help/faq/what-is-corine-land-cover",
+            "id": "whatis",
+            "language": "en",
+            "title": "What is CORINE land cover?  European Environment Agency",
+            "type": ""
+        },
+        {
+            "URL": "https://gisgeography.com/obia-object-based-image-analysis-geobia/",
+            "author": [
+                {
+                    "family": "GISGeography"
+                }
+            ],
+            "id": "gisgeography2014a",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014,
+                        7,
+                        9
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "title": "OBIA - object-based image analysis (GEOBIA)",
+            "type": ""
+        },
+        {
+            "URL": "https://gisgeography.com/obia-object-based-image-analysis-geobia/",
+            "author": [
+                {
+                    "family": "GISGeography"
+                }
+            ],
+            "id": "gisgeography2014b",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014,
+                        7,
+                        9
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "title": "OBIA - object-based image analysis (GEOBIA)",
+            "type": ""
+        },
+        {
+            "URL": "https://gsp.humboldt.edu/olm_2019/courses/GSP_216_Online/lesson6-2/",
+            "id": "accuracy",
+            "title": "Accuracy assessment",
+            "type": ""
+        },
+        {
+            "URL": "https://www.epa.gov/green-infrastructure/reduce-urban-heat-island-effect",
+            "author": [
+                {
+                    "family": "US EPA",
+                    "given": "OW"
+                }
+            ],
+            "id": "usepa2015a",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015,
+                        10,
+                        1
+                    ]
+                ]
+            },
+            "language": "en",
+            "title": "Reduce Urban Heat Island Effect",
+            "type": ""
+        },
+        {
+            "URL": "https://www.mobilizegreen.org/blog/2018/9/30/environmental-equity-vs-environmental-justice-whats-the-difference",
+            "id": "environm2021",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        1,
+                        12
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "title": "Environmental equity vs. Environmental justice: What’s the difference?",
+            "title-short": "Environmental equity vs. Environmental justice",
+            "type": ""
+        },
+        {
+            "URL": "https://www.eea.europa.eu/data-and-maps/figures/climate-analysis-map-for-the",
+            "id": "climate",
+            "language": "en",
+            "title": "Climate analysis map for the Stuttgart region, also showing so-called ventilation paths along with other climate related features  European Environment Agency",
+            "type": ""
         }
     ],
     "project_biblios": [

@@ -63,7 +63,7 @@ knitr::include_graphics('images/sky4.en.png')
 
 -   A phenomenon in which light with straightness is scattered in all directions by rough surfaces or tiny particles.
 
--   It makes **distance measurement difficult** (e.g. atmosphere, clouds) → we need *alternative methods* to gauge distance [Source: @remotely]
+-   It makes **distance measurement difficult** (e.g. atmosphere, clouds) → we need *alternative methods* to gauge distance
 
     -   Synthetic aperture radar (SAR): Polarization, Fluoresence
 
@@ -104,8 +104,11 @@ knitr::include_graphics('images/sky4.en.png')
 
 ## 1.3 Reflection
 
-I tend to check the location in advance with satellite images through Google Maps before I go to an unfamiliar place.
+ I tend to check the location in advance with satellite images through Google Maps before I go to an unfamiliar place. I also used annual aerial photographs to check the phenomenon of the urban sprawl of Suwon City when I worked in South Korea. Learning about remote sensing data in Week 1 reminded me that I have been unconsciously using tremendously advanced technology so far. Still, I have not recognised it because it is commonly used.
 
-Learning about remote sensing data in Week 1 reminded me that I have been unconsciously using tremendously advanced technology so far, and I have not recognised it because it is commonly used. In addition, it also reminded me that I used annual aerial photographs to check the phenomenon of the urban sprawl of Suwon City when I worked in South Korea.
+ Also, I thought that remote sensing data was an optimized task for dealing with massive spaces, such as forests, oceans, rivers, urban areas, rural areas etc. In particular, it may also be commonly used related to agriculture🌾 in rural areas.
 
-Considering that remote sensing data(e.g. aerial photographs) taken at equal intervals can soon be used as historical data for specific spaces, I thought it would be interesting to make future museums fill with 3D aerial photographs, not relics.
+
+*p.s. One interesting imagination* 🙃
+
+ Considering that remote sensing data(e.g. aerial photographs) taken at equal intervals can soon be used as historical data for specific spaces, I thought it would be interesting to make future museums fill with 3D aerial photographs, not relics!

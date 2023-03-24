@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -159,7 +178,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#joining-data-sets-mosaicking" id="toc-joining-data-sets-mosaicking" class="nav-link" data-scroll-target="#joining-data-sets-mosaicking">3.1.3 Joining data sets = Mosaicking</a></li>
   <li><a href="#image-enhancement" id="toc-image-enhancement" class="nav-link" data-scroll-target="#image-enhancement">3.1.4 Image Enhancement</a></li>
   </ul></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">3.2 Application</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">3.2 Application</a>
+  <ul class="collapse">
+  <li><a href="#in-a-study" id="toc-in-a-study" class="nav-link" data-scroll-target="#in-a-study">3.2.1 In a study</a></li>
+  <li><a href="#in-practice" id="toc-in-practice" class="nav-link" data-scroll-target="#in-practice">3.2.2 In practice</a></li>
+  </ul></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">3.3 Reflection</a></li>
   </ul>
 </nav>
@@ -207,11 +230,11 @@ Let’s find out how to get a better image from remotely sensed data 🛰️</p>
 <ul>
 <li>Use GCP(Ground Control Point): match known points in the image and a reference dataset</li>
 </ul>
-<div class="cell" data-layout-align="center" data-hash="wk_3_corrections_cache/html/unnamed-chunk-1_9cf5e0d97a8c11660ac6eaf8e799a7db">
+<div class="cell" data-layout-align="center" data-hash="wk_3_corrections_cache/html/unnamed-chunk-1_c8a4c5d5c8fe013ff430efd026cd3567">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/Geometric-correction-procedures.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<p><img src="images/Geometric-correction-procedures.png" class="img-fluid figure-img" style="width:70.0%"></p>
 <p></p><figcaption class="figure-caption">Source: <a href="https://www.researchgate.net/figure/Geometric-correction-procedures_fig7_320710942">Abdul Basith</a></figcaption><p></p>
 </figure>
 </div>
@@ -238,8 +261,8 @@ Let’s find out how to get a better image from remotely sensed data 🛰️</p>
 <h4 class="anchored" data-anchor-id="atmospheric-correction">3.1.2.2 Atmospheric correction</h4>
 <table class="table">
 <colgroup>
-<col style="width: 22%">
-<col style="width: 77%">
+<col style="width: 31%">
+<col style="width: 68%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -277,11 +300,11 @@ Let’s find out how to get a better image from remotely sensed data 🛰️</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tgh.png" class="img-fluid figure-img" style="width:85.0%"></p>
-<p></p><figcaption class="figure-caption">Source: <a href="https://www.intermap.com/blog/orthorectification-in-a-nutshell">Eric Setyawan</a></figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
+<p>Source : <span class="citation" data-cites="setyawana">Setyawan (<a href="references.html#ref-setyawana" role="doc-biblioref">n.d.</a>)</span></p>
 </section>
 <section id="radiometric-calibration" class="level4">
 <h4 class="anchored" data-anchor-id="radiometric-calibration">3.1.2.4 Radiometric calibration</h4>
@@ -393,6 +416,29 @@ Let’s find out how to get a better image from remotely sensed data 🛰️</p>
 </div>
 </div>
 </div>
+<section id="in-a-study" class="level3">
+<h3 class="anchored" data-anchor-id="in-a-study">3.2.1 In a study</h3>
+<ul>
+<li><p>In the study by <span class="citation" data-cites="sola2018">Sola, Álvarez-Mozos, and González-Audícana (<a href="references.html#ref-sola2018" role="doc-biblioref">2018</a>)</span>, it illustrates three atmospheric calibration methods tested using Sentinel-2 images: 6S, MAJA and SEN2COR.</p></li>
+<li><p>The study area is the southern part of Navarre region of Spain, which is an agricultural area.</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/0005940-fig-2-source-large.gif" class="img-fluid figure-img" style="width:75.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://ieeexplore.ieee.org/abstract/document/8518890?casa_token=98y5g5GmVwYAAAAA:5DmsAgGkxWxyHHqG5vdSRn4xtYWQaWK-qh-J2eTvADzxl7Vsro_42l5PF2T09JbB1gJME7Dc">Sola,I. et al.</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><p>6S is an open-source AC tool and Py6S is used in this work.</p></li>
+<li><p>The land cover and the atmospheric conditions affect the varying performance of the methods. Therefore, it is a key point to select an adequate method when in the pre-processing of Sentinel-2.</p></li>
+</ul>
+</section>
+<section id="in-practice" class="level3">
+<h3 class="anchored" data-anchor-id="in-practice">3.2.2 In practice</h3>
 <ul>
 <li><p>According to the ‘Regulations for aerial photographic surveying’ notice of the National Geographic Information Institute in South Korea, there are articles related to aerial photography and correction to get aerial photos with clear resolution.</p></li>
 <li><p>Monitoring the changes in the national territory with a corrected photo/image is possible.</p>
@@ -406,19 +452,31 @@ Let’s find out how to get a better image from remotely sensed data 🛰️</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/orthogonal imagery_kr.png" class="img-fluid figure-img" style="width:85.0%"></p>
-<p></p><figcaption class="figure-caption">Source: <a href="https://www.ngii.go.kr/eng/content.do?sq=115">National Geographic Information Institute in South Korea</a></figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
+<p>Source : <span class="citation" data-cites="national"><span>“National Geographic Information Institute- Orthogonal Imagery DB”</span> (<a href="references.html#ref-national" role="doc-biblioref">n.d.</a>)</span></p>
+</section>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">3.3 Reflection</h2>
-<p>I realised that remote sensing data, which is easily used in everyday life, come to my hands through various pre-processing(correction/calibration). And I also learned that numerous studies, efforts, and multiple methods had been considered until this became possible.</p>
-<p>Especially for Landsat data, I came to think about the benefits of open-source data in that the frequency of use and data utilization had increased exponentially since October 2008, when the Landsat data was open to the public. The story of Virginia Norwood was also interesting, who came up with the initial idea of Landsat technology.</p>
-<p>In addition, I also realised it is necessary to consider whether remote sensing data is properly pre-processed and suitable for use before data analysis even though remote sensing data provided these days uses corrected data.</p>
+<p>I thought that remote sensing data was available to utilise as soon as it was taken by satellite. But, I found that removing the climate effects through various pre-processing (calibration) methods is necessary to obtain a clear image. Moreover, it was amazing that a lot of research and effort accompanied this until it became possible.</p>
+<p>Recently, remote sensing data has become public data that governments use officially, and public organisations usually provide it. So it is essential to consider whether it is appropriately pre-processed and suitable for use before analysing the data.</p>
+<p>Besides that, <a href="https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_3_corrections.html#in-practice">section 3.2.2</a> shows that the latest technology is not always suitable for all studies. Instead, applying the most suitable method according to the research purpose is important.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-national" class="csl-entry" role="doc-biblioentry">
+<span>“National Geographic Information Institute- Orthogonal Imagery DB.”</span> n.d. <a href="https://www.ngii.go.kr/eng/content.do?sq=115">https://www.ngii.go.kr/eng/content.do?sq=115</a>.
+</div>
+<div id="ref-setyawana" class="csl-entry" role="doc-biblioentry">
+Setyawan, Eric. n.d. <span>“Orthorectification in a Nutshell.”</span> <a href="https://www.intermap.com/blog/orthorectification-in-a-nutshell">https://www.intermap.com/blog/orthorectification-in-a-nutshell</a>.
+</div>
+<div id="ref-sola2018" class="csl-entry" role="doc-biblioentry">
+Sola, I., J. Álvarez-Mozos, and M. González-Audícana. 2018. <span>“IGARSS 2018 - 2018 IEEE International Geoscience and Remote Sensing Symposium.”</span> In, 5940–43. <a href="https://doi.org/10.1109/IGARSS.2018.8518890">https://doi.org/10.1109/IGARSS.2018.8518890</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

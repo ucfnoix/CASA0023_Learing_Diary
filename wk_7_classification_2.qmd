@@ -24,7 +24,7 @@ knitr::include_graphics('images/OBIA-classification1-1-850x370.png')
 
 #### 7.1.2.2 Classification
 
--   There is no rule to classify land cover features but some statistics according to [GISGeography](https://gisgeography.com/obia-object-based-image-analysis-geobia/)
+-   There is no rule to classify land cover features but some statistics, according to @gisgeography2014
 
     +-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
     | Types     | Method                                                                                                                                                                               |
@@ -59,8 +59,9 @@ knitr::include_graphics('images/SPA.png')
 #### 7.1.4.1 Why does accuracy important?
 
 -   It determines the quality of the information derived from remotely sensed data.
--   Remote sensed data are often used for mapping and developing environmental models that are used for management and decision making purposes. (Source: [GSP216](https://gsp.humboldt.edu/olm_2019/courses/GSP_216_Online/lesson6-2/index.html#:~:text=Accuracy%20is%20important%20because%20remote,management%20and%20decision%20making%20purposes.))
+-   Remote sensed data are often used for mapping and developing environmental models that are used for management andecision-makingng purposes.
 -   Therefore, the validity of classification results must be verified.
+-   Source : [@accuracy]
 
 #### 7.1.4.2 Error Matrix
 
@@ -166,8 +167,8 @@ It has been found that this prediction can provide significant improvements to r
 
 -   In analysing specific data for research/study, **the reliability of the research results depends on the accuracy of the data.** We learned various (image) classification methods last week (week 6) and also learned how to check the accuracy accordingly this week (week 7). It was not that unfamiliar to understand for me because it was related to the spatial correlation I learned in the GIS module in the first term.
 
--   It was interesting that we can use machine learning technology for cross-validation by repeating each data differently. When it comes to [7.2.2](https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#flood-in-pakistan), there are two noteworthy results: 1. *There is no perfect single sensor* for reliable flood monitoring. 2. However, *utilising various remote sensing data can be the way* forward in flood disaster risk reduction. It made me think again that **it was up to researchers/people to decide how to use this technology.**
+-   It was interesting that we can use machine learning technology for cross-validation by repeating each data differently. When it comes to [Section 7.2.2](https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#flood-in-pakistan), there are two noteworthy results: 1. *There is no perfect single sensor* for reliable flood monitoring. 2. However, *utilising various remote sensing data can be the way* forward in flood disaster risk reduction. It made me think again that **it was up to researchers/people to decide how to use this technology.**
 
 -   In the case of the Kappa coefficient, it was surprising that it still continues to be used in formal research papers even though it is an accuracy measurement method that does not work well.
 
--   I was also very interested to learn about the principle of sub-pixel analysis. I haven't thought about the principle of image classification and how it works, but it is like a fun game after learning this concept! (p.s. I drew a picture on [7.1.3](https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#sub-pixel-analysis) while remembering Andy's lecture in class, and I especially like my river, which looks like the Milky Way🤭)
+-   I was also very interested to learn about the principle of sub-pixel analysis. I haven't thought about the principle of image classification and how it works, but it is like a fun game after learning this concept! (p.s. I drew a picture on [Section 7.1.3](https://ucfnoix.github.io/CASA0023_Learning_Diary/wk_7_classification_2.html#sub-pixel-analysis) while remembering Andy's lecture in class, and I especially like my river, which looks like the Milky Way🤭)
